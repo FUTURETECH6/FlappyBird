@@ -1,0 +1,4 @@
+verilog work "vgac.v"
+verilog work "Pipe_Generator.v"
+verilog work "Bird_Convert2Display.v"
+verilog work "Display.v"

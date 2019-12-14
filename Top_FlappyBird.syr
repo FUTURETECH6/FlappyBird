@@ -1,0 +1,174 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: Top_FlappyBird.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_FlappyBird.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_FlappyBird"
+Output Format                      : NGC
+Target Device                      : xc7k160t-2L-ffg676
+
+---- Source Options
+Top Module Name                    : Top_FlappyBird
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\SegmentDecoder.v" into library work
+Parsing module <SegmentDecoder>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\vgac.v" into library work
+Parsing module <vgac>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ShiftReg.v" into library work
+Parsing module <ShiftReg>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Seg7Remap.v" into library work
+Parsing module <Seg7Remap>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Seg7Decode.v" into library work
+Parsing module <Seg7Decode>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Pipe_Generator.v" into library work
+Parsing module <Pipe_Generator>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Bird_Convert2Display.v" into library work
+Parsing module <Bird_Convert2Display>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\AntiJitter.v" into library work
+Parsing module <AntiJitter>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Seg7Device.v" into library work
+Parsing module <Seg7Device>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Keypad.v" into library work
+Parsing module <Keypad>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" into library work
+Parsing module <Display>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" into library work
+Parsing module <Top_FlappyBird>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 45: Port dbg_keyLine is not connected to this instance
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 49: Port segment is not connected to this instance
+
+Elaborating module <Top_FlappyBird>.
+WARNING:HDLCompiler:872 - "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 33: Using initial value of state since it is never assigned
+
+Elaborating module <AntiJitter(WIDTH=4)>.
+
+Elaborating module <Keypad>.
+WARNING:HDLCompiler:1127 - "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 45: Assignment to keyCode ignored, since the identifier is never used
+
+Elaborating module <Seg7Device>.
+
+Elaborating module <Seg7Decode>.
+
+Elaborating module <SegmentDecoder>.
+
+Elaborating module <Seg7Remap>.
+
+Elaborating module <ShiftReg(WIDTH=64)>.
+WARNING:HDLCompiler:25 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 53: Module <Bird_Convert2Display> does not have a port named <V_Pos>.
+ERROR:HDLCompiler:329 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 53: Target <RGB_Bird> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 52: Port clk is not connected to this instance
+ERROR:HDLCompiler:329 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 59: Target <pip1_X> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 80: Target <VGA_R> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 77: Port rdn is not connected to this instance
+Module Top_FlappyBird remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 21: Empty module <Top_FlappyBird> remains a black box.
+--> 
+
+Total memory usage is 328308 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

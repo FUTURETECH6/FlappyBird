@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FlappyBird.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Bird_Convert2Display.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Bird_Convert2Display.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Bird_Convert2Display.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Bird_Ctrl.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Bird_Ctrl.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Bird_Ctrl.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Display.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Display.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Display.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_FlappyBird.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Top_FlappyBird.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Top_FlappyBird.xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bg_day_160_120_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bg_day_160_120_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bg_day_160_120_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1576253146" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1576253146">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1576254111" xil_pn:in_ck="-1144799394469729319" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1576254111">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="AntiJitter.v"/>
+      <outfile xil_pn:name="Bird_Convert2Display.v"/>
+      <outfile xil_pn:name="Bird_Ctrl.v"/>
+      <outfile xil_pn:name="Display.v"/>
+      <outfile xil_pn:name="Keypad.v"/>
+      <outfile xil_pn:name="Pipe_Generator.v"/>
+      <outfile xil_pn:name="Seg7Decode.v"/>
+      <outfile xil_pn:name="Seg7Device.v"/>
+      <outfile xil_pn:name="Seg7Remap.v"/>
+      <outfile xil_pn:name="SegmentDecoder.v"/>
+      <outfile xil_pn:name="ShiftReg.v"/>
+      <outfile xil_pn:name="Show_Score.v"/>
+      <outfile xil_pn:name="Top_FlappyBird.v"/>
+      <outfile xil_pn:name="bg_day_160_120_test.v"/>
+      <outfile xil_pn:name="vgac.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1576253477" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8322733755363636355" xil_pn:start_ts="1576253477">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1576253477" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3935161225702499889" xil_pn:start_ts="1576253477">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1576253147" xil_pn:in_ck="-847920442186602187" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2629072348920215966" xil_pn:start_ts="1576253146">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/bg_day_160_120.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/bg_day_160_120.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1576254111" xil_pn:in_ck="415324159522205530" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1576254111">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="AntiJitter.v"/>
+      <outfile xil_pn:name="Bird_Convert2Display.v"/>
+      <outfile xil_pn:name="Bird_Ctrl.v"/>
+      <outfile xil_pn:name="Display.v"/>
+      <outfile xil_pn:name="Keypad.v"/>
+      <outfile xil_pn:name="Pipe_Generator.v"/>
+      <outfile xil_pn:name="Seg7Decode.v"/>
+      <outfile xil_pn:name="Seg7Device.v"/>
+      <outfile xil_pn:name="Seg7Remap.v"/>
+      <outfile xil_pn:name="SegmentDecoder.v"/>
+      <outfile xil_pn:name="ShiftReg.v"/>
+      <outfile xil_pn:name="Show_Score.v"/>
+      <outfile xil_pn:name="Top_FlappyBird.v"/>
+      <outfile xil_pn:name="bg_day_160_120_test.v"/>
+      <outfile xil_pn:name="ipcore_dir/bg_day_160_120.v"/>
+      <outfile xil_pn:name="vgac.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1576254115" xil_pn:in_ck="415324159522205530" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3623025626287984379" xil_pn:start_ts="1576254111">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bg_day_160_120_test_beh.prj"/>
+      <outfile xil_pn:name="bg_day_160_120_test_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1576254116" xil_pn:in_ck="-1027948668228372932" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8867661162214475550" xil_pn:start_ts="1576254115">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bg_day_160_120_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
