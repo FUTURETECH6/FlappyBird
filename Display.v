@@ -39,6 +39,7 @@ module Display(
     reg [8:0]  bird_VPos = 240;
     reg [3:0]  RGB_R,RGB_G,RGB_B;
     reg [11:0] RGB_Bird, RGB_BG, RGB_Land;
+    reg isValid_Bird, isValid_Land;
 
     assign clk_Ctrl = clkdiv[15];
     assign clk_VGA  = clkdiv[1];
@@ -50,6 +51,7 @@ module Display(
     end*/
 
     Bird_Convert2Display BC2D_m0(.clk_ms(clkdiv[10]), .state(state), .pipeInfo(),
+        .isValidPixel(isValid_Bird), 
         .V_Pos(bird_VPos), .RGB_R(RGB_Bird[11:8]), .RGB_G(RGB_Bird[7:4]), .RGB_B(RGB_Bird[3:0]) );
     
     wire [3:0] bg_abondon;
@@ -68,10 +70,10 @@ module Display(
 
     // Procedure: bird > land > pipe > bg, skip the bird
     always @(posedge clk_VGA) begin
-        if(RGB_Bird != 12'hFFF && X_Addr >= bird_HPos - bird_Xwidth/2 && X_Addr <= bird_HPos + bird_Xwidth/2
+        if(isValid_Bird && X_Addr >= bird_HPos - bird_Xwidth/2 && X_Addr <= bird_HPos + bird_Xwidth/2
             && Y_Addr >= bird_VPos - bird_Ywidth/2 && Y_Addr <= bird_VPos + bird_Ywidth/2)
             {RGB_R,RGB_G,RGB_B} <= RGB_Bird;
-        else if(Y_Addr < land_height)
+        else if(isValid_Land/* && Y_Addr < land_height*/)
             {RGB_R,RGB_G,RGB_B} <= RGB_Land;
         else if(X_Addr > pip1_X-pip_width && X_Addr < pip1_X && !(Y_Addr > pip1_Y-pip_height && Y_Addr < pip1_Y))
             {RGB_R,RGB_G,RGB_B} <= pip_COLOR;

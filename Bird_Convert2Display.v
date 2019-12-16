@@ -23,6 +23,7 @@ module Bird_Convert2Display(
     input [1:0] state, pipeInfo,
     output reg [8:0] V_pos,
     output reg [3:0] RGB_R,RGB_G,RGB_B,
+    output reg isValidPixel,
     output reg isDead
     );
 
