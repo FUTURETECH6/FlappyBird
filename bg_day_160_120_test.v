@@ -26,30 +26,23 @@ module bg_day_160_120_test;
 
     // Inputs
     reg [14:0] a;
-    reg [15:0] d;
-    reg clk;
-    reg we;
-
     // Outputs
     wire [15:0] spo;
 
     // Instantiate the Unit Under Test (UUT)
     bg_day_160_120 uut (
         .a(a), 
-        .d(d), 
-        .clk(clk), 
-        .we(we), 
         .spo(spo)
     );
 
     integer i = 0;
     initial begin
-        a = 0; d = 0; clk = 0; we = 0;
+        a = 0;
         for(i = 0; 1; i = i + 1) begin
-            #2; a = a + 1;
+            #1; a = a + 1;
         end
     end
-    always #1 clk = ~clk;
+    //always #1 clk = ~clk;
       
 endmodule
 

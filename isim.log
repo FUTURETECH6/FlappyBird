@@ -14,3 +14,5 @@ Finished circuit initialization process.
 Simulator is doing circuit initialization process.
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
 Finished circuit initialization process.
+WARNING in bg_day_160_120_test.uut.inst at time             19200000 ns: 
+Reading from out-of-range address. Max address in bg_day_160_120_test.uut.inst is       19199

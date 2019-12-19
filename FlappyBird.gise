@@ -52,7 +52,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1576254111" xil_pn:in_ck="-1144799394469729319" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1576254111">
+    <transform xil_pn:end_ts="1576495412" xil_pn:in_ck="-1144799394469729319" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1576495412">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -83,13 +83,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1576253147" xil_pn:in_ck="-847920442186602187" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2629072348920215966" xil_pn:start_ts="1576253146">
+    <transform xil_pn:end_ts="1576495264" xil_pn:in_ck="-8974912336310059130" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2629072348920215966" xil_pn:start_ts="1576495263">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="ipcore_dir/bg_day_160_120.ngc"/>
       <outfile xil_pn:name="ipcore_dir/bg_day_160_120.v"/>
+      <outfile xil_pn:name="ipcore_dir/bg_land_160_25.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/bg_land_160_25.v"/>
+      <outfile xil_pn:name="ipcore_dir/bird0_0.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/bird0_0.v"/>
     </transform>
-    <transform xil_pn:end_ts="1576254111" xil_pn:in_ck="415324159522205530" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1576254111">
+    <transform xil_pn:end_ts="1576495412" xil_pn:in_ck="-5264784015659757629" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1576495412">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -112,15 +118,17 @@
       <outfile xil_pn:name="Top_FlappyBird.v"/>
       <outfile xil_pn:name="bg_day_160_120_test.v"/>
       <outfile xil_pn:name="ipcore_dir/bg_day_160_120.v"/>
+      <outfile xil_pn:name="ipcore_dir/bg_land_160_25.v"/>
+      <outfile xil_pn:name="ipcore_dir/bird0_0.v"/>
       <outfile xil_pn:name="vgac.v"/>
     </transform>
-    <transform xil_pn:end_ts="1576254115" xil_pn:in_ck="415324159522205530" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3623025626287984379" xil_pn:start_ts="1576254111">
+    <transform xil_pn:end_ts="1576495417" xil_pn:in_ck="-5264784015659757629" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3623025626287984379" xil_pn:start_ts="1576495412">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bg_day_160_120_test_beh.prj"/>
@@ -130,10 +138,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1576254116" xil_pn:in_ck="-1027948668228372932" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8867661162214475550" xil_pn:start_ts="1576254115">
+    <transform xil_pn:end_ts="1576495418" xil_pn:in_ck="-1027948668228372932" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8867661162214475550" xil_pn:start_ts="1576495417">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>

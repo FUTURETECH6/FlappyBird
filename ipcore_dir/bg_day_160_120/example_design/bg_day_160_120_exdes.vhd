@@ -75,12 +75,9 @@ use unisim.vcomponents.all;
 --------------------------------------------------------------------------------
 entity bg_day_160_120_exdes is
   PORT (
-    CLK        : IN  STD_LOGIC                                                := '0';
-    WE         : IN  STD_LOGIC                                                := '0';
     SPO        : OUT STD_LOGIC_VECTOR(16-1 downto 0);
     A          : IN  STD_LOGIC_VECTOR(15-1-(4*0*boolean'pos(15>4)) downto 0)
-                 := (OTHERS => '0');
-    D          : IN  STD_LOGIC_VECTOR(16-1 downto 0)                := (OTHERS => '0')
+                 := (OTHERS => '0')
       );
 
 end bg_day_160_120_exdes;
@@ -89,17 +86,13 @@ end bg_day_160_120_exdes;
 
 architecture xilinx of bg_day_160_120_exdes is
 
-    SIGNAL CLK_i    : std_logic;
     
   component bg_day_160_120 is
   PORT (
 
-    CLK                     : IN STD_LOGIC;
-    WE                      : IN  STD_LOGIC;
     SPO                     : OUT STD_LOGIC_VECTOR(16-1 downto 0);
     A                       : IN  STD_LOGIC_VECTOR(15-1-(4*0*boolean'pos(15>4)) downto 0)
-                              := (OTHERS => '0');
-    D                       : IN  STD_LOGIC_VECTOR(16-1 downto 0)                := (OTHERS => '0')
+                              := (OTHERS => '0')
 
 );
   end component;
@@ -110,19 +103,11 @@ begin
   dmg0 : bg_day_160_120
     port map (
 
-      CLK                     => CLK_i,
-      WE                      => WE,
       SPO                     => SPO,
-      A                       => A,
-      D                       => D
+      A                       => A
 
       );
 
-clk_buf: bufg
-    PORT MAP(
-      i => CLK,
-      o => CLK_i
-      );
 
 
 

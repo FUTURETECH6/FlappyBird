@@ -38,16 +38,10 @@
 
 module bg_day_160_120(
   a,
-  d,
-  clk,
-  we,
   spo
 );
 
 input [14 : 0] a;
-input [15 : 0] d;
-input clk;
-input we;
 output [15 : 0] spo;
 
 // synthesis translate_off
@@ -57,8 +51,8 @@ output [15 : 0] spo;
     .C_DEFAULT_DATA("0"),
     .C_DEPTH(19200),
     .C_FAMILY("kintex7"),
-    .C_HAS_CLK(1),
-    .C_HAS_D(1),
+    .C_HAS_CLK(0),
+    .C_HAS_D(0),
     .C_HAS_DPO(0),
     .C_HAS_DPRA(0),
     .C_HAS_I_CE(0),
@@ -73,9 +67,9 @@ output [15 : 0] spo;
     .C_HAS_QSPO_SRST(0),
     .C_HAS_SPO(1),
     .C_HAS_SPRA(0),
-    .C_HAS_WE(1),
+    .C_HAS_WE(0),
     .C_MEM_INIT_FILE("bg_day_160_120.mif"),
-    .C_MEM_TYPE(1),
+    .C_MEM_TYPE(0),
     .C_PARSER_TYPE(1),
     .C_PIPELINE_STAGES(0),
     .C_QCE_JOINED(0),
@@ -88,12 +82,12 @@ output [15 : 0] spo;
   )
   inst (
     .A(a),
-    .D(d),
-    .CLK(clk),
-    .WE(we),
     .SPO(spo),
+    .D(),
     .DPRA(),
     .SPRA(),
+    .CLK(),
+    .WE(),
     .I_CE(),
     .QSPO_CE(),
     .QDPO_CE(),

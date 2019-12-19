@@ -5,38 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 45: Port <arg fmt="%s" index="1">dbg_keyLine</arg> is not connected to this instance
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 49: Port <arg fmt="%s" index="1">segment</arg> is not connected to this instance
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="872" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 33: Using initial value of <arg fmt="%s" index="1">state</arg> since it is never assigned
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 45: Assignment to <arg fmt="%s" index="1">keyCode</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="25" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 53: Module &lt;<arg fmt="%s" index="1">Bird_Convert2Display</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">V_Pos</arg>&gt;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="329" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 53: Target &lt;<arg fmt="%s" index="1">RGB_Bird</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 52: Port <arg fmt="%s" index="1">clk</arg> is not connected to this instance
-</msg>
-
-<msg type="error" file="HDLCompiler" num="329" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 59: Target &lt;<arg fmt="%s" index="1">pip1_X</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="329" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 80: Target &lt;<arg fmt="%s" index="1">VGA_R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 77: Port <arg fmt="%s" index="1">rdn</arg> is not connected to this instance
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"\\mac\home\Documents\Xilinx\FlappyBird\Top_FlappyBird.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">Top_FlappyBird</arg>&gt; remains a black box.
-</msg>
-
 </messages>
 

@@ -55,10 +55,7 @@ vcom -work work ../../example_design/bg_day_160_120_exdes.vhd
 echo "Compiling Test Bench Files"
 
 vcom -work work    ../bg_day_160_120_tb_pkg.vhd
-vcom -work work    ../bg_day_160_120_tb_rng.vhd
-vcom -work work    ../bg_day_160_120_tb_dgen.vhd
 vcom -work work    ../bg_day_160_120_tb_agen.vhd
-vcom -work work    ../bg_day_160_120_tb_checker.vhd
 vcom -work work    ../bg_day_160_120_tb_stim_gen.vhd
 vcom -work work    ../bg_day_160_120_tb_synth.vhd 
 vcom -work work    ../bg_day_160_120_tb.vhd

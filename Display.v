@@ -25,6 +25,7 @@ module Display(
     input [15:0] SW_OK,
     output reg [3:0] VGA_R, VGA_G, VGA_B,
     output VGA_hs, VGA_vs
+    output reg [7:0] score;
 );
 
     parameter pip_COLOR   = 12'h0C0;
@@ -57,7 +58,7 @@ module Display(
     wire [3:0] bg_abondon;
     wire [14:0] bg_addr;
     assign bg_addr = ((479 - Y_Addr) * 640 + X_Addr) / 4;
-    bg_day_160_120 BG_day_m0(.a(bg_addr), .spo({bg_abondon, RGB_Land) );
+    bg_day_160_120 BG_day_m0(.a(bg_addr), .spo({bg_abondon, RGB_Land}) );
 
     /* Right-Up Side */
     reg [9:0] pip1_X;

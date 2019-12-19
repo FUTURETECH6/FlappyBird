@@ -1,6 +1,6 @@
---------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
 --
--- DIST MEM GEN Core - Stimulus Generator For Single Port RAM Configuration
+-- DIST MEM GEN Core - Stimulus Generator For ROM Configuration
 --
 --------------------------------------------------------------------------------
 --
@@ -74,165 +74,295 @@ USE IEEE.STD_LOGIC_MISC.ALL;
 
 LIBRARY work;
 USE work.ALL;
-
 USE work.bg_day_160_120_TB_PKG.ALL;
 
 
-ENTITY REGISTER_LOGIC_SRAM IS
+ENTITY REGISTER_LOGIC_ROM IS
   PORT(
     Q   : OUT STD_LOGIC;
-    CLK : IN STD_LOGIC;
+    CLK   : IN STD_LOGIC;
     RST : IN STD_LOGIC;
     D   : IN STD_LOGIC
-  );
-END REGISTER_LOGIC_SRAM;
+    );
+END REGISTER_LOGIC_ROM;
 
-ARCHITECTURE REGISTER_ARCH OF REGISTER_LOGIC_SRAM IS
+ARCHITECTURE REGISTER_ARCH OF REGISTER_LOGIC_ROM IS
   SIGNAL Q_O : STD_LOGIC :='0';
 BEGIN
   Q <= Q_O;
-  FF_BEH: PROCESS(CLK)
-  BEGIN
-    IF(RISING_EDGE(CLK)) THEN
-      IF(RST ='1') THEN
-    	  Q_O <= '0';
-      ELSE
-        Q_O <= D;
-      END IF;
+FF_BEH: PROCESS(CLK)
+BEGIN
+  IF(RISING_EDGE(CLK)) THEN
+    IF(RST /= '0' ) THEN
+	   Q_O <= '0';
+    ELSE
+      Q_O <= D;
     END IF;
-  END PROCESS;
+  END IF;
+END PROCESS;
 END REGISTER_ARCH;
+
+LIBRARY STD;
+USE STD.TEXTIO.ALL;
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
+--USE IEEE.NUMERIC_STD.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_MISC.ALL;
 
-LIBRARY work;
+ LIBRARY work;
 USE work.ALL;
 USE work.bg_day_160_120_TB_PKG.ALL;
 
 ENTITY bg_day_160_120_TB_STIM_GEN IS
+  GENERIC ( C_ROM_SYNTH : INTEGER := 0
+      );
   PORT (
     CLK : IN STD_LOGIC;
     RST : IN STD_LOGIC;
-    A   : OUT  STD_LOGIC_VECTOR(15-1 downto 0)   := (OTHERS => '0'); 
-    D   : OUT  STD_LOGIC_VECTOR(16-1 downto 0)         := (OTHERS => '0');
-    WE         : OUT  STD_LOGIC  := '0';
+    A   : OUT  STD_LOGIC_VECTOR(15-1 downto 0) := (OTHERS => '0');
     DATA_IN : IN STD_LOGIC_VECTOR (15 DOWNTO 0);   --OUTPUT VECTOR 
         
-    CHECK_DATA : OUT STD_LOGIC:= '0'
+    STATUS : OUT STD_LOGIC:= '0'
     	  );
 END bg_day_160_120_TB_STIM_GEN;
 
+
 ARCHITECTURE BEHAVIORAL OF bg_day_160_120_TB_STIM_GEN IS
 
-  CONSTANT ZERO           : STD_LOGIC_VECTOR(31 DOWNTO 0)                := (OTHERS => '0');
-  CONSTANT DATA_PART_CNT_A: INTEGER:=1;
-  SIGNAL   WRITE_ADDR     : STD_LOGIC_VECTOR(31 DOWNTO 0)                := (OTHERS => '0');
-  SIGNAL   WRITE_ADDR_INT : STD_LOGIC_VECTOR(14 DOWNTO 0)   := (OTHERS => '0');
-  SIGNAL   DO_READ_REG    : STD_LOGIC_VECTOR(4 DOWNTO 0)                 :=(OTHERS => '0');
-  SIGNAL   READ_ADDR_INT  : STD_LOGIC_VECTOR(14 DOWNTO 0)   := (OTHERS => '0');
-  SIGNAL   READ_ADDR      : STD_LOGIC_VECTOR(31 DOWNTO 0)                := (OTHERS => '0');
-  SIGNAL   D_INT          : STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL   DO_WRITE       : STD_LOGIC                                    := '0';
-  SIGNAL   DO_READ        : STD_LOGIC                                    := '0';
-  SIGNAL   COUNT_NO       : INTEGER                                      :=0;
+  FUNCTION std_logic_vector_len(
+    hex_str       : STD_LOGIC_VECTOR;
+    return_width  : INTEGER)
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE tmp   : STD_LOGIC_VECTOR(return_width DOWNTO 0) := (OTHERS => '0');
+    VARIABLE tmp_z : STD_LOGIC_VECTOR(return_width-(hex_str'LENGTH) DOWNTO 0) := (OTHERS => '0');
+
+  BEGIN
+    tmp := tmp_z & hex_str;
+    RETURN tmp(return_width-1 DOWNTO 0);
+  END std_logic_vector_len;
+
+  CONSTANT ZERO : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL READ_ADDR_INT : STD_LOGIC_VECTOR(14 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL READ_ADDR : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL CHECK_READ_ADDR : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL EXPECTED_DATA : STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL DO_READ : STD_LOGIC := '0';
+  SIGNAL CHECK_DATA : STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => '0');
+  CONSTANT DEFAULT_DATA  : STD_LOGIC_VECTOR(15 DOWNTO 0):= std_logic_vector_len("0",16);
+
 BEGIN
-  WRITE_ADDR_INT(14 DOWNTO 0) <= WRITE_ADDR(14 DOWNTO 0);
-  READ_ADDR_INT(14 DOWNTO 0)  <= READ_ADDR(14 DOWNTO 0);
-  A <= IF_THEN_ELSE(DO_WRITE='1',WRITE_ADDR_INT,READ_ADDR_INT); 
-  D <= D_INT;
-  CHECK_DATA <= DO_READ;
 
-RD_AGEN_INST:ENTITY work.bg_day_160_120_TB_AGEN
-  GENERIC MAP( 
-    C_MAX_DEPTH => 19200 
-  )
-  PORT MAP(
-    CLK        => CLK,
-    RST        => RST,
-    EN         => DO_READ,
-    LOAD       => '0',
-    LOAD_VALUE => ZERO,
-    ADDR_OUT   => READ_ADDR
-  );
+SYNTH_COE:  IF(C_ROM_SYNTH =0 ) GENERATE
 
-WR_AGEN_INST:ENTITY work.bg_day_160_120_TB_AGEN
-  GENERIC MAP(
-    C_MAX_DEPTH => 19200  )
-  PORT MAP(
-    CLK        => CLK,
-  	 RST        => RST,
-	 EN         => DO_WRITE,
-    LOAD       => '0',
- 	 LOAD_VALUE => ZERO,
- 	 ADDR_OUT   => WRITE_ADDR
-  );
+type mem_type is array (19199 downto 0) of std_logic_vector(15 downto 0);
 
-WR_DGEN_INST:ENTITY work.bg_day_160_120_TB_DGEN
-   GENERIC MAP (
-     DATA_GEN_WIDTH => 16,
-     DOUT_WIDTH     => 16,
-     DATA_PART_CNT  => DATA_PART_CNT_A,
-     SEED           => 2
-   )
-   PORT MAP (
-     CLK      => CLK,
- 	  RST      => RST,
-     EN       => DO_WRITE,
-     DATA_OUT => D_INT          
-   );
+  FUNCTION bit_to_sl(input: BIT) RETURN STD_LOGIC IS
+    VARIABLE temp_return : STD_LOGIC;
+  BEGIN
+    IF(input = '0') THEN
+      temp_return := '0';
+    ELSE
+      temp_return := '1';
+    END IF;
+    RETURN temp_return;
+  END bit_to_sl;
 
-WR_RD_PROCESS: PROCESS (CLK)
+  function char_to_std_logic (
+    char : in character)
+  return std_logic is
+    variable data : std_logic;
+  begin
+    if char = '0' then
+      data := '0';
+    elsif char = '1' then
+      data := '1';
+    elsif char = 'X' then
+      data := 'X';
+    else
+      assert false
+      report "character which is not '0', '1' or 'X'."
+      severity warning;
+      data := 'U';
+    end if;
+
+      return data;
+
+  end char_to_std_logic;
+
+impure FUNCTION init_memory(
+  C_USE_DEFAULT_DATA : INTEGER;
+  C_LOAD_INIT_FILE : INTEGER ;
+  C_INIT_FILE_NAME : STRING ;
+  DEFAULT_DATA   :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+  width : INTEGER;
+  depth         : INTEGER)
+RETURN mem_type IS
+  VARIABLE init_return   : mem_type := (OTHERS => (OTHERS => '0'));
+  FILE     init_file     : TEXT;
+  VARIABLE mem_vector    : BIT_VECTOR(width-1 DOWNTO 0);
+  VARIABLE bitline     : LINE;
+  variable bitsgood    : boolean := true;
+  variable bitchar     : character;
+  VARIABLE i             : INTEGER;
+  VARIABLE j             : INTEGER;
 BEGIN
-  IF(RISING_EDGE(CLK)) THEN
-     IF(RST='1') THEN
- 	    DO_WRITE <= '0';
-       DO_READ  <= '0';
-       COUNT_NO <=  0 ;
-     ELSIF(COUNT_NO < 4) THEN
- 	    DO_WRITE <= '1';
-       DO_READ  <= '0';
-       COUNT_NO <= COUNT_NO + 1;
-     ELSIF(COUNT_NO< 8) THEN
-	    DO_WRITE <= '0';
-       DO_READ  <= '1';
-       COUNT_NO <= COUNT_NO + 1;
-     ELSIF(COUNT_NO=8) THEN
-       DO_WRITE <= '0';
-       DO_READ  <= '0';
-       COUNT_NO <=  0 ;
-     END IF;
+
+  --Display output message indicating that the behavioral model is being
+  --initialized
+  ASSERT (NOT (C_USE_DEFAULT_DATA=1 OR C_LOAD_INIT_FILE=1)) REPORT " Distributed Memory Generator CORE Generator module loading initial data..." SEVERITY NOTE;
+
+  -- Setup the default data
+  -- Default data is with respect to write_port_A and may be wider
+  -- or narrower than init_return width.  The following loops map
+  -- default data into the memory
+  IF (C_USE_DEFAULT_DATA=1) THEN
+    FOR i IN 0 TO depth-1 LOOP
+      init_return(i) := DEFAULT_DATA;
+    END LOOP;
+  END IF;
+
+  -- Read in the .mif file
+  -- The init data is formatted with respect to write port A dimensions.
+  -- The init_return vector is formatted with respect to minimum width and
+  -- maximum depth; the following loops map the .mif file into the memory
+  IF (C_LOAD_INIT_FILE=1) THEN
+    file_open(init_file, C_INIT_FILE_NAME, read_mode);
+    i := 0;
+    WHILE (i < depth AND NOT endfile(init_file)) LOOP
+      mem_vector := (OTHERS => '0');
+      readline(init_file, bitline);
+--     read(file_buffer, mem_vector(file_buffer'LENGTH-1 DOWNTO 0));
+
+      FOR j IN 0 TO width-1 LOOP
+		  read(bitline,bitchar,bitsgood);
+        init_return(i)(width-1-j) := char_to_std_logic(bitchar);
+      END LOOP;
+      i := i + 1;
+    END LOOP;
+      file_close(init_file);
+  END IF;
+  RETURN init_return;
+
+END FUNCTION;
+
+
+--***************************************************************
+-- convert bit to STD_LOGIC
+--***************************************************************
+
+constant c_init : mem_type := init_memory(1,
+                                          1,
+										            "bg_day_160_120.mif",
+                                          DEFAULT_DATA,
+                                          16,
+                                          19200);
+
+
+constant rom : mem_type := c_init;
+BEGIN
+
+ EXPECTED_DATA <= rom(conv_integer(unsigned(check_read_addr)));
+
+ CHECKER_RD_AGEN_INST:ENTITY work.bg_day_160_120_TB_AGEN
+   GENERIC MAP( C_MAX_DEPTH =>19200 )
+
+   PORT MAP(
+     CLK => CLK,
+     RST => RST,
+     EN  => CHECK_DATA(2),
+     LOAD => '0',
+     LOAD_VALUE => ZERO,
+     ADDR_OUT => check_read_addr
+     );
+ 
+
+  PROCESS(CLK)
+  BEGIN
+    IF(RISING_EDGE(CLK)) THEN
+      IF(CHECK_DATA(2) ='1') THEN
+    	  IF(EXPECTED_DATA = DATA_IN) THEN
+	       STATUS<='0';
+    	  ELSE
+	       STATUS <= '1';
+     	  END IF;
+      END IF;
+	 END IF;
+  END PROCESS;
+END GENERATE; 
+-- Simulatable ROM 
+
+--Synthesizable ROM
+SYNTH_CHECKER: IF(C_ROM_SYNTH = 1) GENERATE
+  PROCESS(CLK)
+  BEGIN
+    IF(RISING_EDGE(CLK)) THEN
+	   IF(CHECK_DATA(2)='1') THEN
+		  IF(DATA_IN=DEFAULT_DATA) THEN
+		    STATUS <= '0';
+	     ELSE
+		    STATUS <= '1';
+		  END IF;
+	   END IF;
+	 END IF;
+  END PROCESS;
+
+END GENERATE;
+
+
+  READ_ADDR_INT(14 DOWNTO 0) <= READ_ADDR(14 DOWNTO 0);
+  A <= READ_ADDR_INT ;
+
+  CHECK_DATA(0) <= DO_READ;
+
+  RD_AGEN_INST:ENTITY work.bg_day_160_120_TB_AGEN
+    GENERIC MAP( C_MAX_DEPTH => 19200 )
+
+    PORT MAP(
+      CLK => CLK,
+     	RST => RST,
+      EN  => DO_READ,
+      LOAD => '0',
+     	LOAD_VALUE => ZERO,
+    	ADDR_OUT => READ_ADDR
+      );
+
+RD_PROCESS: PROCESS (CLK)
+BEGIN
+  IF (RISING_EDGE(CLK)) THEN
+    IF(RST='1') THEN
+      DO_READ <= '0';
+	 ELSE
+      DO_READ <= '1';
+	 END IF;
   END IF;
 END PROCESS;
 
-BEGIN_SHIFT_REG: FOR I IN 0 TO 4 GENERATE
+
+BEGIN_EN_REG: FOR I IN 0 TO 2 GENERATE
 BEGIN
   DFF_RIGHT: IF I=0 GENERATE
   BEGIN
-    SHIFT_INST_0: ENTITY work.REGISTER_LOGIC_SRAM
+    SHIFT_INST_0: ENTITY work.REGISTER_LOGIC_ROM
       PORT MAP(
-        Q   => DO_READ_REG(0),
+        Q   => CHECK_DATA(1),
         CLK => CLK,
         RST => RST,
-        D   => DO_READ
+        D   => CHECK_DATA(0)
       );
   END GENERATE DFF_RIGHT;
-  DFF_OTHERS: IF ((I>0) AND (I<=4)) GENERATE
+  DFF_CE_OTHERS: IF ((I>0) AND (I<2)) GENERATE
   BEGIN
-     SHIFT_INST: ENTITY work.REGISTER_LOGIC_SRAM
-       PORT MAP(
-          Q   => DO_READ_REG(I),
-          CLK => CLK,
-          RST => RST,
-          D   => DO_READ_REG(I-1)
-       );
-  END GENERATE DFF_OTHERS;
-END GENERATE BEGIN_SHIFT_REG;
-
-
-  WE <= IF_THEN_ELSE(DO_WRITE='1','1','0') ;
+    SHIFT_INST: ENTITY work.REGISTER_LOGIC_ROM
+      PORT MAP(
+        Q   => CHECK_DATA(I+1),
+        CLK => CLK,
+        RST => RST,
+        D   => CHECK_DATA(I)
+        );
+  END GENERATE DFF_CE_OTHERS;
+END GENERATE BEGIN_EN_REG;
 
 END ARCHITECTURE;

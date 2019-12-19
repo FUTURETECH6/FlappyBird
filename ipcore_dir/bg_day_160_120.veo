@@ -44,9 +44,6 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 bg_day_160_120 your_instance_name (
   .a(a), // input [14 : 0] a
-  .d(d), // input [15 : 0] d
-  .clk(clk), // input clk
-  .we(we), // input we
   .spo(spo) // output [15 : 0] spo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

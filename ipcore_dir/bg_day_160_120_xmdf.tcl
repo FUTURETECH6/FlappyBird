@@ -107,19 +107,7 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path bg_day_160_1
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path bg_day_160_120/simulation/bg_day_160_120_tb_checker.vhd
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
-incr fcount
-
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path bg_day_160_120/simulation/bg_day_160_120_tb_dgen.vhd
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
-incr fcount
-
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path bg_day_160_120/simulation/bg_day_160_120_tb_pkg.vhd
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
-incr fcount
-
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path bg_day_160_120/simulation/bg_day_160_120_tb_rng.vhd
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
 incr fcount
 

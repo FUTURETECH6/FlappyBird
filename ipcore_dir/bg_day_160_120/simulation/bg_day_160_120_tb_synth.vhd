@@ -99,12 +99,9 @@ ARCHITECTURE bg_day_160_120_synth_ARCH OF bg_day_160_120_tb_synth IS
 
 COMPONENT bg_day_160_120_exdes
   PORT (
-    CLK        : IN  STD_LOGIC                                                := '0';
-    WE         : IN  STD_LOGIC                                                := '0';
     SPO        : OUT STD_LOGIC_VECTOR(16-1 downto 0);
     A          : IN  STD_LOGIC_VECTOR(15-1-(4*0*boolean'pos(15>4)) downto 0)
-                 := (OTHERS => '0');
-    D          : IN  STD_LOGIC_VECTOR(16-1 downto 0)                := (OTHERS => '0')
+                 := (OTHERS => '0')
       );
 
 END COMPONENT;
@@ -122,14 +119,8 @@ END COMPONENT;
 
   SIGNAL ADDR: STD_LOGIC_VECTOR(14 DOWNTO 0) := (OTHERS => '0');
   SIGNAL ADDR_R: STD_LOGIC_VECTOR(14 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL WE : STD_LOGIC:='0';
-  SIGNAL WE_R : STD_LOGIC:='0';
   SIGNAL SPO: STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
   SIGNAL SPO_R: STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL D: STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL D_R: STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL CHECKER_EN: STD_LOGIC:='0';
-  SIGNAL CHECKER_EN_R: STD_LOGIC:='0';
   SIGNAL ITER_R0 : STD_LOGIC := '0';
   SIGNAL ITER_R1 : STD_LOGIC := '0';
   SIGNAL ITER_R2 : STD_LOGIC := '0';
@@ -166,37 +157,15 @@ END PROCESS;
 STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
 
  bg_day_160_120_TB_STIM_GEN_INST:ENTITY work.bg_day_160_120_TB_STIM_GEN
+    GENERIC MAP(  C_ROM_SYNTH => C_ROM_SYNTH
+              )
      PORT MAP(
        CLK         => clk_in_i,
        RST         => RSTA,
        A           => ADDR,
-       D           => D,
-       WE          => WE,
 		 DATA_IN     => SPO_R,
-		 CHECK_DATA  => CHECKER_EN
+		 STATUS      => ISSUE_FLAG(0)
              );
-   DMG_DATA_CHECKER_INST: ENTITY work.bg_day_160_120_TB_CHECKER
-      GENERIC MAP ( 
-        WRITE_WIDTH => 16,
-		  READ_WIDTH  => 16      )
-      PORT MAP (
-        CLK     => CLKA,
-        RST     => RSTA, 
-        EN      => CHECKER_EN_R,
-        DATA_IN => SPO_R,
-        STATUS  => ISSUE_FLAG(0)
-	   );
-
-   PROCESS(CLKA)
-   BEGIN
-     IF(RISING_EDGE(CLKA)) THEN
-       IF(RSTA='1') THEN
-		    CHECKER_EN_R <= '0';
-	    ELSE
-		    CHECKER_EN_R <= CHECKER_EN AFTER 50 ns;
-        END IF;
-      END IF;
-   END PROCESS;
 
 
 
@@ -232,13 +201,9 @@ STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
       BEGIN
         IF(RISING_EDGE(CLKA)) THEN
 		  IF(RESET_SYNC_R3='1') THEN
-          WE_R       <= '0' AFTER 50 ns;
           SPO_R      <= (OTHERS=>'0') AFTER 50 ns;
-          D_R        <= (OTHERS=>'0') AFTER 50 ns;
            ELSE
-          WE_R       <= WE AFTER 50 ns;
           SPO_R      <= SPO AFTER 50 ns;
-          D_R        <= D AFTER 50 ns;
          END IF;
 	    END IF;
       END PROCESS;
@@ -255,11 +220,8 @@ STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
       END PROCESS;
 
     DMG_PORT: bg_day_160_120_exdes PORT MAP (
-      CLK                     => CLKA,
-      WE                      => WE_R,
       SPO                     => SPO,
-      A                       => ADDR_R,
-      D                       => D_R
+      A                       => ADDR_R
 
       );
 END ARCHITECTURE;

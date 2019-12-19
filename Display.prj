@@ -1,4 +1,5 @@
 verilog work "vgac.v"
 verilog work "Pipe_Generator.v"
+verilog work "ipcore_dir/bg_day_160_120.v"
 verilog work "Bird_Convert2Display.v"
 verilog work "Display.v"

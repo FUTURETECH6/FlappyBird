@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> Parameter xsthdpdir set to Z:/Documents/Xilinx/FlappyBird/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> Reading design: Display.prj
 
@@ -43,14 +43,16 @@ Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\vgac.v" into libr
 Parsing module <vgac>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Pipe_Generator.v" into library work
 Parsing module <Pipe_Generator>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bg_day_160_120.v" into library work
+Parsing module <bg_day_160_120>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Bird_Convert2Display.v" into library work
 Parsing module <Bird_Convert2Display>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" into library work
 Parsing module <Display>.
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.34 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.75 secs
  
 --> 
 

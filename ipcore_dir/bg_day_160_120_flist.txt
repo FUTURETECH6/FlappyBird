@@ -27,10 +27,7 @@ bg_day_160_120\implement\xst.prj
 bg_day_160_120\implement\xst.scr
 bg_day_160_120\simulation\bg_day_160_120_tb.vhd
 bg_day_160_120\simulation\bg_day_160_120_tb_agen.vhd
-bg_day_160_120\simulation\bg_day_160_120_tb_checker.vhd
-bg_day_160_120\simulation\bg_day_160_120_tb_dgen.vhd
 bg_day_160_120\simulation\bg_day_160_120_tb_pkg.vhd
-bg_day_160_120\simulation\bg_day_160_120_tb_rng.vhd
 bg_day_160_120\simulation\bg_day_160_120_tb_stim_gen.vhd
 bg_day_160_120\simulation\bg_day_160_120_tb_synth.vhd
 bg_day_160_120\simulation\functional\simulate_mti.bat
