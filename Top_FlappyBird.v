@@ -40,15 +40,15 @@ module Top_FlappyBird(
 
     wire [15:0] SW_OK;
     AntiJitter #(4) Top_AJ_SW[15:0](.clk(clkdiv[15]), .I(SW), .O(SW_OK) );
-    
+
     wire [4:0] keyCode;
     wire keyReady;
     Keypad Top_KP(.clk(clkdiv[15]), .keyX(BTN_Y), .keyY(BTN_X), .keyCode(keyCode), .ready(keyReady) );
-    
+
     wire [31:0] segTestData;
     //wire [3:0]  sout;
     Seg7Device Top_S7Device(.clkIO(clkdiv[3]), .clkScan(clkdiv[15:14]), .clkBlink(clkdiv[25]),
-        .data({24'b0,score}}), .point(8'h0), .LES(8'h0), .sout({SEGLED_CLK,SEGLED_DO,SEGLED_PEN,SEGLED_CLR}) );
+        .data({24'b0,score}), .point(8'h0), .LES(8'h0), .sout({SEGLED_CLK,SEGLED_DO,SEGLED_PEN,SEGLED_CLR}) );
     //assign SEGLED_CLK = sout[3];
     //assign SEGLED_DO  = sout[2];
     //assign SEGLED_PEN = sout[1];
