@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Documents/Xilinx/FlappyBird/Display_test_isim_beh.exe" -prj "Z:/Documents/Xilinx/FlappyBird/Display_test_beh.prj" "work.Display_test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Documents/Xilinx/FlappyBird/vgac_test_isim_beh.exe" -prj "Z:/Documents/Xilinx/FlappyBird/vgac_test_beh.prj" "work.vgac_test" "work.glbl" 

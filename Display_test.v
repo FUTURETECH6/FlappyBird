@@ -61,7 +61,8 @@ module Display_test;
         SW_OK = 0;
         up_button = 0;
         SW_OK[0] = 1;
-        #100;
+        #1000000;
+        state = 1;
         
         for(i = 0; i < 30; i = i + 1) begin
             up_button = 1;

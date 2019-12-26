@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/Documents/Xilinx/FlappyBird/vgac_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vgac_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/vgac_test/row_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">row_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">row_addr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/col_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">col_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">col_addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/hs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hs</obj_property>
+      <obj_property name="ObjectShortName">hs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/vs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vs</obj_property>
+      <obj_property name="ObjectShortName">vs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/vga_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_clk</obj_property>
+      <obj_property name="ObjectShortName">vga_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/clrn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clrn</obj_property>
+      <obj_property name="ObjectShortName">clrn</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus12" type="vbus" db_ref_id="1">
+      <obj_property name="label">bgr</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/vgac_test/b" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">b[3:0]</obj_property>
+         <obj_property name="ObjectShortName">b[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/vgac_test/g" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">g[3:0]</obj_property>
+         <obj_property name="ObjectShortName">g[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/vgac_test/r" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/read" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vgac_test/d_in_BGR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_in_BGR[11:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in_BGR[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

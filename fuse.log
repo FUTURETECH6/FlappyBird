@@ -1,23 +1,20 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/Documents/Xilinx/FlappyBird/Display_test_isim_beh.exe -prj Z:/Documents/Xilinx/FlappyBird/Display_test_beh.prj work.Display_test work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/Documents/Xilinx/FlappyBird/vgac_test_isim_beh.exe -prj Z:/Documents/Xilinx/FlappyBird/vgac_test_beh.prj work.vgac_test work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 3
 Turning on mult-threading, number of parallel sub-compilation jobs: 6 
 Determining compilation order of HDL files
 Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/vgac.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/Pipe_Generator.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/pipe_up_20_12.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/pipe_down_20_12.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird1_2.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird1_1.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird1_0.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird0_2.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird0_1.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bird0_0.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bg_night_160_120.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bg_land_160_25.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/ipcore_dir/bg_day_160_120.v" into library work
-Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/Bird_Ctrl.v" into library work
-ERROR:HDLCompiler:1660 - "Z:/Documents/Xilinx/FlappyBird/Bird_Ctrl.v" Line 50: Procedural assignment to a non-register state is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/Documents/Xilinx/FlappyBird/Bird_Ctrl.v" Line 50: Procedural assignment to a non-register state is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:598 - "Z:/Documents/Xilinx/FlappyBird/Bird_Ctrl.v" Line 21: Module <Bird_Ctrl> ignored due to previous errors.
-Verilog file Z:/Documents/Xilinx/FlappyBird/Bird_Ctrl.v ignored due to errors
+Analyzing Verilog file "Z:/Documents/Xilinx/FlappyBird/vgac_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module vgac
+Compiling module vgac_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\vgac_test_isim_beh.exe.sim\libPortability.dll".
+Compiled 3 Verilog Units
+Built simulation executable Z:/Documents/Xilinx/FlappyBird/vgac_test_isim_beh.exe
+Fuse Memory Usage: 27272 KB
+Fuse CPU Usage: 561 ms

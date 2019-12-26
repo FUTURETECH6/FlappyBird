@@ -94,7 +94,7 @@ FF_BEH: PROCESS(CLK)
 BEGIN
   IF(RISING_EDGE(CLK)) THEN
     IF(RST /= '0' ) THEN
-       Q_O <= '0';
+	   Q_O <= '0';
     ELSE
       Q_O <= D;
     END IF;
