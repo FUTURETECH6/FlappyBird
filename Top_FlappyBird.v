@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Top_FlappyBird(
     input clk,
-    input rstn,
+    input rst,
     input [15:0]SW,
     output [3:0] VGA_R, VGA_G, VGA_B,
     output VGA_hs, VGA_vs,
@@ -31,9 +31,11 @@ module Top_FlappyBird(
 );
     /* Global Variables*/
     reg [1:0] state = 0;  // 0 is waitForStart; 1 is flying; 2 is dead
-    reg [7:0] score = 0;
-
+    wire [7:0] score;
     reg [31:0]clkdiv;
+    wire isDead;
+    wire up_button; 
+
     always@(posedge clk) begin
         clkdiv <= clkdiv + 1'b1;
     end
@@ -45,15 +47,21 @@ module Top_FlappyBird(
     wire keyReady;
     Keypad Top_KP(.clk(clkdiv[15]), .keyX(BTN_Y), .keyY(BTN_X), .keyCode(keyCode), .ready(keyReady) );
 
+    assign up_button = keyReady;    // Use any button to fly the bird up
+
     wire [31:0] segTestData;
-    //wire [3:0]  sout;
+    //wire [3:0] sout;
     Seg7Device Top_S7Device(.clkIO(clkdiv[3]), .clkScan(clkdiv[15:14]), .clkBlink(clkdiv[25]),
         .data({24'b0,score}), .point(8'h0), .LES(8'h0), .sout({SEGLED_CLK,SEGLED_DO,SEGLED_PEN,SEGLED_CLR}) );
-    //assign SEGLED_CLK = sout[3];
-    //assign SEGLED_DO  = sout[2];
-    //assign SEGLED_PEN = sout[1];
-    //assign SEGLED_CLR = sout[0];
 
+    always @* begin
+        if(rst)
+            state <= 0;
+        if(up_button)
+            state <= 1;
+        if(isDead)
+            state <= 2;
+    end
     Display DP_m0(.state(state), .clkdiv(clkdiv), .SW_OK(SW_OK),
-        .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B), .VGA_hs(VGA_hs), .VGA_vs(VGA_vs) ,.score(score) );
+        .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B), .VGA_hs(VGA_hs), .VGA_vs(VGA_vs) ,.score(score), .isDead(isDead) );
 endmodule

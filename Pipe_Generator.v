@@ -21,12 +21,15 @@
 module Pipe_Generator(
     input clk_2ms,
     input [1:0] state,
-    output reg [9:0] pip_X,  // [0, 640+pip_width]
-    output reg [8:0] pip_Y  // [pip_height, 480]
+    output reg [9:0] pip_X,  // [0, 640+slot_width]
+    output reg [8:0] pip_Y,  // [slot_height, 480]
+    output reg [7:0] score
     );
 
-    parameter pip_width  = 100;
-    parameter pip_height = 100;
+    parameter slot_width  = 100;
+    parameter slot_height = 100;
+    parameter bird_HPos   = 320;
+    parameter bird_Xwidth = 34;
 
     /*reg clk_2ms;
     initial clk_2ms = 0;
@@ -34,13 +37,19 @@ module Pipe_Generator(
 
     always @(posedge clk_2ms) begin
         case(state)
-            0:  pip_X <= 0;
+            0:  begin
+                    pip_X <= 0;
+                    score <= 0;
+                end
             1:  begin
+                    if(pip_X == bird_HPos - bird_Xwidth)
+                        score <= score + 1;
                     if(pip_X == 0) begin
-                       pip_X <= 640 + pip_width;
-                        pip_Y <= pip_height + {$random} % (480 - pip_height);
-                    end else
-                        pip_Y <= pip_Y - 1;
+                        pip_X <= 640 + slot_width;
+                        pip_Y <= slot_height + {$random} % (480 - slot_height);
+                    end
+                    else
+                        pip_X <= pip_X - 1;
                 end
             default:begin
                         pip_X <= pip_X; pip_Y <= pip_Y;

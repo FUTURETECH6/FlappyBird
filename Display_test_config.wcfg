@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/Documents/Xilinx/FlappyBird/Display_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Display_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/Display_test/VGA_hs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_hs</obj_property>
+      <obj_property name="ObjectShortName">VGA_hs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/VGA_vs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_vs</obj_property>
+      <obj_property name="ObjectShortName">VGA_vs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/isDead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isDead</obj_property>
+      <obj_property name="ObjectShortName">isDead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/VGA_R" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/VGA_G" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/VGA_B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/score" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">score[7:0]</obj_property>
+      <obj_property name="ObjectShortName">score[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/clkdiv" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clkdiv[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clkdiv[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/SW_OK" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW_OK[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SW_OK[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/up_button" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">up_button</obj_property>
+      <obj_property name="ObjectShortName">up_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Display_test/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+</wave_config>
