@@ -30,8 +30,8 @@ module vgac_test;
     reg [11:0] d_in_BGR;
 
     // Outputs
-    wire [8:0] row_addr;
-    wire [9:0] col_addr;
+    wire [8:0] Y_Addr;
+    wire [9:0] X_Addr;
     wire read;
     wire [3:0] r;
     wire [3:0] g;
@@ -44,8 +44,8 @@ module vgac_test;
         .vga_clk(vga_clk), 
         .clrn(clrn), 
         .d_in_BGR(d_in_BGR), 
-        .row_addr(row_addr), 
-        .col_addr(col_addr), 
+        .Y_Addr(Y_Addr), 
+        .X_Addr(X_Addr), 
         .read(read), 
         .r(r), 
         .g(g), 

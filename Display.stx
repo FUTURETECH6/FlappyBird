@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Display.prj
 
@@ -43,6 +43,10 @@ Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\vgac.v" into libr
 Parsing module <vgac>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Pipe_Generator.v" into library work
 Parsing module <Pipe_Generator>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\pipe_up_20_12.v" into library work
+Parsing module <pipe_up_20_12>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\pipe_down_20_12.v" into library work
+Parsing module <pipe_down_20_12>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bird1_2.v" into library work
 Parsing module <bird1_2>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bird1_1.v" into library work
@@ -55,29 +59,26 @@ Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bird0_
 Parsing module <bird0_1>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bird0_0.v" into library work
 Parsing module <bird0_0>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bg_night_160_120.v" into library work
+Parsing module <bg_night_160_120>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bg_land_160_25.v" into library work
+Parsing module <bg_land_160_25>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\ipcore_dir\bg_day_160_120.v" into library work
 Parsing module <bg_day_160_120>.
-Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Bird_Convert2Display.v" into library work
-Parsing module <Bird_Convert2Display>.
+Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Bird_Ctrl.v" into library work
+Parsing module <Bird_Ctrl>.
 Analyzing Verilog file "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" into library work
 Parsing module <Display>.
-ERROR:HDLCompiler:806 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 65: Syntax error near ",".
-ERROR:HDLCompiler:31 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 66: <bird_valid_02> is already declared.
-INFO:HDLCompiler:1408 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 65. bird_valid_02 is declared here
-INFO:HDLCompiler:1408 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 65. bird_valid_10 is declared here
-INFO:HDLCompiler:1408 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 65. bird_valid_11 is declared here
-INFO:HDLCompiler:1408 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 65. bird_valid_12 is declared here
-ERROR:HDLCompiler:69 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 76: <clk_bird> is not declared.
-ERROR:HDLCompiler:69 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 79: <bire_RGB_10> is not declared.
-ERROR:HDLCompiler:69 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 83: <bire_RGB_10> is not declared.
-ERROR:HDLCompiler:69 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 87: <bire_RGB_10> is not declared.
-ERROR:HDLCompiler:598 - "\\mac\home\Documents\Xilinx\FlappyBird\Display.v" Line 22: Module <Display> ignored due to previous errors.
-Verilog file \\mac\home\Documents\Xilinx\FlappyBird\Display.v ignored due to errors
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.28 secs
+ 
 --> 
 
 Total memory usage is 325996 kilobytes
 
-Number of errors   :    7 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

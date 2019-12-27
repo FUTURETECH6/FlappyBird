@@ -55,10 +55,10 @@
     NET "SEGLED_DO"  LOC = L24       | IOSTANDARD = LVCMOS33 ;      
     NET "SEGLED_PEN" LOC = R18       | IOSTANDARD = LVCMOS33 ;      
 
-    NET "LED_CLK"    LOC = N26       | IOSTANDARD = LVCMOS33 ;
-    NET "LED_CLR"    LOC = N24       | IOSTANDARD = LVCMOS33 ;
-    NET "LED_DO"     LOC = M26       | IOSTANDARD = LVCMOS33 ;     
-    NET "LED_PEN"    LOC = P18       | IOSTANDARD = LVCMOS33 ;     
+    //NET "LED_CLK"    LOC = N26       | IOSTANDARD = LVCMOS33 ;
+    //NET "LED_CLR"    LOC = N24       | IOSTANDARD = LVCMOS33 ;
+    //NET "LED_DO"     LOC = M26       | IOSTANDARD = LVCMOS33 ;
+    //NET "LED_PEN"    LOC = P18       | IOSTANDARD = LVCMOS33 ;
 
     NET "BTN_X[0]"   LOC = V17       | IOSTANDARD = LVCMOS18 | PULLUP;
     NET "BTN_X[1]"   LOC = W18       | IOSTANDARD = LVCMOS18 | PULLUP;
@@ -86,7 +86,6 @@
     NET "SW[13]"     LOC = AE13      | IOSTANDARD = LVCMOS15 ;
     NET "SW[14]"     LOC = AF13      | IOSTANDARD = LVCMOS15 ;
     NET "SW[15]"     LOC = AF10      | IOSTANDARD = LVCMOS15 ;
-	NET "buzzer"     LOC = AF24      | IOSTANDARD = LVCMOS33;
 
     NET "VGA_R[0]"   LOC = N21       | IOSTANDARD = LVCMOS33 | SLEW = FAST ;
     NET "VGA_R[1]"   LOC = N22       | IOSTANDARD = LVCMOS33 | SLEW = FAST ;

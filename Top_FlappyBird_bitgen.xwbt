@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Documents\Xilinx\FlappyBird\Top_FlappyBird.ncd
+OUTFILE=Z:\Documents\Xilinx\FlappyBird\Top_FlappyBird.bit
+FAMILY=Kintex7
+PART=xc7k160t-2lffg676
+WORKINGDIR=Z:\Documents\Xilinx\FlappyBird
+LICENSE=WebPack
+USER_INFO=__0_0_0

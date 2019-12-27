@@ -42,9 +42,9 @@ module Display(
 
     wire clk_Ctrl, clk_VGA;
     wire [8:0]  bird_VPos;
-    reg [3:0]  RGB_R,RGB_G,RGB_B;
-    reg [11:0] RGB_Bird;
-    wire [11:0] RGB_Land;
+    reg [3:0]  BGR_R,BGR_G,BGR_B;
+    reg [11:0] BGR_Bird;
+    wire [11:0] BGR_Land;
     reg Opacity_Bird;;
     wire [9:0] X_Addr;
     wire [8:0] Y_Addr;
@@ -63,58 +63,65 @@ module Display(
     
     /* BackGround */
     wire [14:0] bg_addr;
-    wire [11:0] RGB_Day, RGB_Night;
+    wire [11:0] BGR_Day, BGR_Night;
     wire [3:0] day_abondon, night_abondon;
-    assign bg_addr = (479 - Y_Addr) * 160 + X_Addr / 4;
-    bg_day_160_120 BG_day_m0(.a(bg_addr), .spo({day_abondon, RGB_Day}) );
-    bg_night_160_120 BG_night_m0(.a(bg_addr), .spo({night_abondon, RGB_Night}) );
+    assign bg_addr = (119 - Y_Addr / 4) * 160 + X_Addr / 4;
+    bg_day_160_120 BG_day_m0(.a(bg_addr), .spo({day_abondon, BGR_Day}) );
+    bg_night_160_120 BG_night_m0(.a(bg_addr), .spo({night_abondon, BGR_Night}) );
 
     /* Land */
     wire [11:0] land_addr;
     wire [3:0] land_abandon;
-    assign land_addr = Y_Addr < 100 ? (99 - Y_Addr) * 160 + X_Addr / 4 : 0;
-    bg_land_160_25 Land_m0(.a(land_addr), .spo({land_abandon, RGB_Land}));
+    assign inLand = Y_Addr < 100;
+    assign land_addr = inLand ? (24 - Y_Addr / 4) * 160 + X_Addr / 4 : 0;
+    bg_land_160_25 Land_m0(.a(land_addr), .spo({land_abandon, BGR_Land}));
 
     /* Pipe: Right-Up Side */
     wire [7:0] pip_addr_up, pip_addr_down;
-    wire [11:0] RGB_upPip, RGB_downPip;
+    wire [11:0] BGR_upPip, BGR_downPip;
     wire [3:0] pU_abandon, pD_abandon;
 
+    assign inPipe = (Y_Addr > pip1_Y || Y_Addr < pip1_Y - slot_height) && X_Addr > pip1_X - slot_width && X_Addr < pip1_X;
     assign pip_addr_up = (Y_Addr - pip1_Y) > 12 ? (pip1_X - X_Addr) : (Y_Addr - pip1_Y) * 20 + (pip1_X - X_Addr);
     assign pip_addr_down = (pip1_Y - slot_height - Y_Addr) > 12 ? (pip1_X - X_Addr + 200) : (pip1_Y - slot_height - Y_Addr) * 20 + (pip1_X - X_Addr);
 
-    pipe_up_20_12   PU_m0(.a(pip_addr_up),   .spo({pU_abandon, RGB_upPip}));
-    pipe_down_20_12 PD_m0(.a(pip_addr_down), .spo({pD_abandon, RGB_downPip}));
+    pipe_up_20_12   PU_m0(.a(pip_addr_up),   .spo({pU_abandon, BGR_upPip}));
+    pipe_down_20_12 PD_m0(.a(pip_addr_down), .spo({pD_abandon, BGR_downPip}));
 
     /* Bird: Right_Down Side */
     wire [3:0] bird_opacity_00, bird_opacity_01, bird_opacity_02, bird_opacity_10, bird_opacity_11, bird_opacity_12;
-    wire [11:0] bird_RGB_00, bird_RGB_01, bird_RGB_02, bird_RGB_10, bird_RGB_11, bird_RGB_12;
+    wire [11:0] bird_BGR_00, bird_BGR_01, bird_BGR_02, bird_BGR_10, bird_BGR_11, bird_BGR_12;
     wire [9:0] bird_addr;
     assign inBird = Y_Addr >= bird_VPos && Y_Addr < bird_VPos + bird_Ywidth && X_Addr <= bird_HPos && X_Addr > bird_HPos - bird_Xwidth;
     assign bird_addr = inBird ? bird_Xwidth * (bird_VPos + bird_Ywidth - 1 - Y_Addr) + (bird_HPos - X_Addr) : 0;
-    bird0_0 BG_B00_m0(.a(bird_addr), .spo({bird_opacity_00, bird_RGB_00}));
-    bird0_1 BG_B01_m0(.a(bird_addr), .spo({bird_opacity_01, bird_RGB_01}));
-    bird0_2 BG_B02_m0(.a(bird_addr), .spo({bird_opacity_02, bird_RGB_02}));
-    bird1_0 BG_B10_m0(.a(bird_addr), .spo({bird_opacity_10, bird_RGB_10}));
-    bird1_1 BG_B11_m0(.a(bird_addr), .spo({bird_opacity_11, bird_RGB_11}));
-    bird1_2 BG_B12_m0(.a(bird_addr), .spo({bird_opacity_12, bird_RGB_12}));
-    reg [1:0] clk_bird = 0;
+    bird0_0 BG_B00_m0(.a(bird_addr), .spo({bird_opacity_00, bird_BGR_00}));
+    bird0_1 BG_B01_m0(.a(bird_addr), .spo({bird_opacity_01, bird_BGR_01}));
+    bird0_2 BG_B02_m0(.a(bird_addr), .spo({bird_opacity_02, bird_BGR_02}));
+    bird1_0 BG_B10_m0(.a(bird_addr), .spo({bird_opacity_10, bird_BGR_10}));
+    bird1_1 BG_B11_m0(.a(bird_addr), .spo({bird_opacity_11, bird_BGR_11}));
+    bird1_2 BG_B12_m0(.a(bird_addr), .spo({bird_opacity_12, bird_BGR_12}));
+    reg [1:0] clk_bird = 0;    // For wing shaking
     always @(posedge clkdiv[24])
-        clk_bird = clk_bird == 2 ? 0 : clk_bird + 1;
+        clk_bird = clk_bird == 3 ? 0 : clk_bird + 1;
     always @(clk_bird) begin
         case(clk_bird)
             0: begin
-                Opacity_Bird <= SW_OK[SW_Bird] ? (bird_opacity_10 == 1'hF ? 1 : 0) : (bird_opacity_00 == 1'hF ? 1 : 0);
-                RGB_Bird <= SW_OK[SW_Bird] ? bird_RGB_10 : bird_RGB_00;
+                Opacity_Bird <= SW_OK[SW_Bird] ? bird_opacity_10 : bird_opacity_00;
+                BGR_Bird <= SW_OK[SW_Bird] ? bird_BGR_10 : bird_BGR_00;
             end
             1: begin
-                Opacity_Bird <= SW_OK[SW_Bird] ? (bird_opacity_11 == 1'hF ? 1 : 0) : (bird_opacity_01 == 1'hF ? 1 : 0);
-                RGB_Bird <= SW_OK[SW_Bird] ? bird_RGB_10 : bird_RGB_00;
+                Opacity_Bird <= SW_OK[SW_Bird] ? bird_opacity_11 : bird_opacity_01;
+                BGR_Bird <= SW_OK[SW_Bird] ? bird_BGR_10 : bird_BGR_00;
             end
             2: begin
-                Opacity_Bird <= SW_OK[SW_Bird] ? (bird_opacity_12 == 1'hF ? 1 : 0) : (bird_opacity_02 == 1'hF ? 1 : 0);
-                RGB_Bird <= SW_OK[SW_Bird] ? bird_RGB_10 : bird_RGB_00;
+                Opacity_Bird <= SW_OK[SW_Bird] ? bird_opacity_12 : bird_opacity_02;
+                BGR_Bird <= SW_OK[SW_Bird] ? bird_BGR_10 : bird_BGR_00;
             end
+            3: begin
+                Opacity_Bird <= SW_OK[SW_Bird] ? bird_opacity_11 : bird_opacity_01;
+                BGR_Bird <= SW_OK[SW_Bird] ? bird_BGR_10 : bird_BGR_00;
+            end
+            default: ;
         endcase
     end
 
@@ -123,21 +130,22 @@ module Display(
     // Procedure: bird > land > pipe > bg, skip the bird
     always @(posedge clk_VGA) begin
         if(inBird && Opacity_Bird)
-            {RGB_R,RGB_G,RGB_B} <= RGB_Bird;
+            {BGR_B,BGR_G,BGR_R} <= BGR_Bird;
         else if(inLand)
-            {RGB_R,RGB_G,RGB_B} <= RGB_Land;
-        else if(inPipe)
+            {BGR_B,BGR_G,BGR_R} <= BGR_Land;
+        else if(inPipe) begin
             if(Y_Addr > pip1_Y)
-                {RGB_R,RGB_G,RGB_B} <= RGB_upPip;
+                {BGR_B,BGR_G,BGR_R} <= BGR_upPip;
             if(Y_Addr < pip1_Y - slot_height)
-                {RGB_R,RGB_G,RGB_B} <= RGB_downPip;
+                {BGR_B,BGR_G,BGR_R} <= BGR_downPip;
+        end
         else
-            {RGB_R,RGB_G,RGB_B} <= SW_OK[SW_BG] ? RGB_Night : RGB_Day;
+            {BGR_B,BGR_G,BGR_R} <= SW_OK[SW_BG] ? BGR_Night : BGR_Day;
     end
 
     vgac vgac_m0(
-        .vga_clk(clk_VGA), .clrn(SW_OK[0]), .d_in_BGR({RGB_B,RGB_G,RGB_R}),
-        .row_addr(Y_Addr), .col_addr(X_Addr),
+        .vga_clk(clk_VGA), .clrn(~SW_OK[0]), .d_in_BGR({BGR_B,BGR_G,BGR_R}),
+        .Y_Addr(Y_Addr), .X_Addr(X_Addr),
         .r(VGA_R), .g(VGA_G), .b(VGA_B), .hs(VGA_hs), .vs(VGA_vs)
     );
 
