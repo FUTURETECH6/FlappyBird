@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-12-27T17:30:05</DateModified>
+  <DateModified>2019-12-28T11:41:36</DateModified>
   <ModuleName>Top_FlappyBird</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>Z:/Documents/Xilinx/FlappyBird/iseconfig/Top_FlappyBird.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Documents/Xilinx/FlappyBird\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/FlappyBird/iseconfig/Top_FlappyBird.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/FlappyBird\</ImplementationReportsDirectory>
   <DateInitialized>2019-12-13T22:12:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
