@@ -29,7 +29,7 @@ module Bird_Ctrl(
 
     parameter initialVelocity = 20;  // Velocity after up_button
     parameter H_pos       = 320;
-    parameter slot_width  = 100;
+    parameter slot_width  = 60;
     parameter slot_height = 100;
     parameter land_height = 100;
 

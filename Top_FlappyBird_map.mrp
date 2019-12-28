@@ -10,39 +10,39 @@ Target Device  : xc7k160t
 Target Package : ffg676
 Target Speed   : -2l
 Mapper Version : kintex7 -- $Revision: 1.55 $
-Mapped Date    : Sat Dec 28 12:06:20 2019
+Mapped Date    : Sat Dec 28 16:39:24 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    5
 Slice Logic Utilization:
-  Number of Slice Registers:                   224 out of 202,800    1%
-    Number used as Flip Flops:                 222
+  Number of Slice Registers:                   258 out of 202,800    1%
+    Number used as Flip Flops:                 248
     Number used as Latches:                      2
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,563 out of 101,400    4%
-    Number used as logic:                    4,556 out of 101,400    4%
-      Number using O6 output only:           3,825
-      Number using O5 output only:              56
-      Number using O5 and O6:                  675
+    Number used as AND/OR logics:                8
+  Number of Slice LUTs:                      8,075 out of 101,400    7%
+    Number used as logic:                    8,068 out of 101,400    7%
+      Number using O6 output only:           6,158
+      Number using O5 output only:              88
+      Number using O5 and O6:                1,822
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
     Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         6
+      Number with same-slice register load:      2
+      Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,559 out of  25,350    6%
-  Number of LUT Flip Flop pairs used:        4,594
-    Number with an unused Flip Flop:         4,406 out of   4,594   95%
-    Number with an unused LUT:                  31 out of   4,594    1%
-    Number of fully used LUT-FF pairs:         157 out of   4,594    3%
-    Number of unique control sets:              23
+  Number of occupied Slices:                 3,132 out of  25,350   12%
+  Number of LUT Flip Flop pairs used:        8,110
+    Number with an unused Flip Flop:         7,889 out of   8,110   97%
+    Number with an unused LUT:                  35 out of   8,110    1%
+    Number of fully used LUT-FF pairs:         186 out of   8,110    2%
+    Number of unique control sets:              26
     Number of slice register sites lost
-      to control set restrictions:             112 out of 202,800    1%
+      to control set restrictions:             134 out of 202,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -59,8 +59,8 @@ IO Utilization:
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     325    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     650    0%
-  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
-    Number used as BUFGs:                        4
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     400    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     400    0%
@@ -91,11 +91,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                5.15
+Average Fanout of Non-Clock Nets:                4.94
 
-Peak Memory Usage:  1112 MB
-Total REAL time to MAP completion:  1 mins 19 secs 
-Total CPU time to MAP completion:   1 mins 19 secs 
+Peak Memory Usage:  5311 MB
+Total REAL time to MAP completion:  2 mins 2 secs 
+Total CPU time to MAP completion:   1 mins 59 secs 
 
 Table of Contents
 -----------------
@@ -140,14 +140,14 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net state_0_G is sourced by a
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network DP_m0/n0122<0> has no load.
+INFO:LIT:243 - Logical network DP_m0/n0128<0> has no load.
 INFO:LIT:395 - The above info message is repeated 17 more times for the
    following (max. 5 shown):
    LED_CLK,
    LED_CLR,
    LED_DO,
    LED_PEN,
-   SW<15>_IBUF
+   SW<14>_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:Pack:1716 - Initializing temperature to 100.000 Celsius. (default - Range:
    0.000 to 100.000 Celsius)
@@ -171,11 +171,11 @@ The trimmed logic reported below is either:
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
-The signal "DP_m0/PWR_10_o_GND_20_o_add_51_OUT<0>" is unused and has been
+The signal "DP_m0/PWR_10_o_GND_20_o_add_67_OUT<0>" is unused and has been
 removed.
- Unused block "DP_m0/Madd_PWR_10_o_GND_20_o_add_51_OUT_xor<0>" (XOR) removed.
-The signal "DP_m0/n0122<0>" is unused and has been removed.
- Unused block "DP_m0/Mmux_n012211" (ROM) removed.
+ Unused block "DP_m0/Madd_PWR_10_o_GND_20_o_add_67_OUT_xor<0>" (XOR) removed.
+The signal "DP_m0/n0128<0>" is unused and has been removed.
+ Unused block "DP_m0/Mmux_n012811" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

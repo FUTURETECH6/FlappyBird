@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\FlappyBird\Top_FlappyBird.ncd
-OUTFILE=C:\FlappyBird\Top_FlappyBird.bit
+INFILE=G:\FlappyBird\Top_FlappyBird.ncd
+OUTFILE=G:\FlappyBird\Top_FlappyBird.bit
 FAMILY=Kintex7
 PART=xc7k160t-2lffg676
-WORKINGDIR=C:\FlappyBird
+WORKINGDIR=G:\FlappyBird
 LICENSE=WebPack
 USER_INFO=__0_0_0

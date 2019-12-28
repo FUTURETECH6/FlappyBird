@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CST509N47::  Sat Dec 28 12:07:41 2019
+CST509N01::  Sat Dec 28 16:41:29 2019
 
 par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd
 Top_FlappyBird.pcf 
@@ -27,29 +27,29 @@ Device speed data version:  "PRODUCTION 1.10 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   224 out of 202,800    1%
-    Number used as Flip Flops:                 222
+  Number of Slice Registers:                   258 out of 202,800    1%
+    Number used as Flip Flops:                 248
     Number used as Latches:                      2
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,563 out of 101,400    4%
-    Number used as logic:                    4,556 out of 101,400    4%
-      Number using O6 output only:           3,825
-      Number using O5 output only:              56
-      Number using O5 and O6:                  675
+    Number used as AND/OR logics:                8
+  Number of Slice LUTs:                      8,075 out of 101,400    7%
+    Number used as logic:                    8,068 out of 101,400    7%
+      Number using O6 output only:           6,158
+      Number using O5 output only:              88
+      Number using O5 and O6:                1,822
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
     Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         6
+      Number with same-slice register load:      2
+      Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,559 out of  25,350    6%
-  Number of LUT Flip Flop pairs used:        4,594
-    Number with an unused Flip Flop:         4,406 out of   4,594   95%
-    Number with an unused LUT:                  31 out of   4,594    1%
-    Number of fully used LUT-FF pairs:         157 out of   4,594    3%
+  Number of occupied Slices:                 3,132 out of  25,350   12%
+  Number of LUT Flip Flop pairs used:        8,110
+    Number with an unused Flip Flop:         7,889 out of   8,110   97%
+    Number with an unused LUT:                  35 out of   8,110    1%
+    Number of fully used LUT-FF pairs:         186 out of   8,110    2%
     Number of slice register sites lost
       to control set restrictions:               0 out of 202,800    0%
 
@@ -68,8 +68,8 @@ IO Utilization:
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     325    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     650    0%
-  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
-    Number used as BUFGs:                        4
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     400    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     400    0%
@@ -104,46 +104,46 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 13 secs 
-Finished initial Timing Analysis.  REAL time: 13 secs 
+Starting initial Timing Analysis.  REAL time: 16 secs 
+Finished initial Timing Analysis.  REAL time: 16 secs 
 
+WARNING:Par:288 - The signal rst_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<10>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<11>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<12>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<13>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<14>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal SW<15>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SW<0>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<4>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<5>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal SW<6>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<7>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<8>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<9>_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 27137 unrouted;      REAL time: 15 secs 
+Phase  1  : 45478 unrouted;      REAL time: 18 secs 
 
-Phase  2  : 25573 unrouted;      REAL time: 16 secs 
+Phase  2  : 42469 unrouted;      REAL time: 19 secs 
 
-Phase  3  : 11501 unrouted;      REAL time: 23 secs 
+Phase  3  : 19848 unrouted;      REAL time: 34 secs 
 
-Phase  4  : 11500 unrouted; (Par is working to improve performance)     REAL time: 29 secs 
+Phase  4  : 24820 unrouted; (Par is working to improve performance)     REAL time: 50 secs 
 
 Updating file: Top_FlappyBird.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 8 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 38 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 51 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 38 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 51 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 38 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 51 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 39 secs 
-Total REAL time to Router completion: 39 secs 
-Total CPU time to Router completion: 41 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 54 secs 
+Total REAL time to Router completion: 3 mins 54 secs 
+Total CPU time to Router completion: 3 mins 57 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -154,7 +154,7 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 0 (Setup: 0, Hold: 0)
+Timing Score: 63781 (Setup: 63781, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -163,30 +163,30 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.712ns|     N/A|           0
-  div_3_BUFG                                | HOLD        |     0.035ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.523ns|     N/A|           0
+  div_3_BUFG                                | HOLD        |     0.189ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.137ns|     N/A|           0
-  div<10>                                   | HOLD        |     0.169ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    40.343ns|     N/A|       63781
+  div_1_BUFG                                | HOLD        |     0.163ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.858ns|     N/A|           0
-  div_15_BUFG                               | HOLD        |     0.142ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.800ns|     N/A|           0
+  div_15_BUFG                               | HOLD        |     0.108ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    12.257ns|     N/A|           0
-  div_1_BUFG                                | HOLD        |     0.138ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.555ns|     N/A|           0
+  div_20_BUFG                               | HOLD        |     0.178ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.229ns|     N/A|           0
-  div<23>                                   | HOLD        |     0.179ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.389ns|     N/A|           0
+  div<22>                                   | HOLD        |     0.194ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.205ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.236ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.189ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.219ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net sta | SETUP       |         N/A|     0.900ns|     N/A|           0
-  te_0_G                                    | HOLD        |     0.179ns|            |       0|           0
+  Autotimespec constraint for clock net sta | SETUP       |         N/A|     0.859ns|     N/A|           0
+  te_0_G                                    | HOLD        |     0.173ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -200,10 +200,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 13 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 40 secs 
-Total CPU time to PAR completion: 42 secs 
+Total REAL time to PAR completion: 3 mins 56 secs 
+Total CPU time to PAR completion: 3 mins 59 secs 
 
-Peak Memory Usage:  915 MB
+Peak Memory Usage:  5118 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

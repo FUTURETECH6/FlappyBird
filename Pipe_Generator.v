@@ -26,7 +26,7 @@ module Pipe_Generator(
     output reg [7:0] score
     );
 
-    parameter slot_width  = 100;
+    parameter slot_width  = 60;
     parameter slot_height = 100;
     parameter bird_HPos   = 320;
     parameter bird_Xwidth = 34;
@@ -45,7 +45,7 @@ module Pipe_Generator(
                     if(pip_X == bird_HPos - bird_Xwidth)
                         score <= score + 1;
                     if(pip_X == 0) begin
-                        pip_X <= 640 + slot_width;
+                        pip_X <= 639 + slot_width;
                         pip_Y <= slot_height + {$random} % (480 - slot_height);
                     end
                     else

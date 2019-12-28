@@ -16,10 +16,23 @@ module Seg7Device(
 
     always @*
         case(clkScan)
-        2'b00: begin segment <= ~dispPattern[ 7: 0]; anode <= 4'b1110; end
-        2'b01: begin segment <= ~dispPattern[15: 8]; anode <= 4'b1101; end
-        2'b10: begin segment <= ~dispPattern[23:16]; anode <= 4'b1011; end
-        2'b11: begin segment <= ~dispPattern[31:24]; anode <= 4'b0111; end
+            2'b00: begin
+                segment <= ~dispPattern[ 7: 0];
+                anode <= 4'b1110;
+            end
+            2'b01: begin
+                segment <= ~dispPattern[15: 8];
+                anode <= 4'b1101;
+            end
+            2'b10: begin
+                segment <= ~dispPattern[23:16];
+                anode <= 4'b1011;
+            end
+            2'b11: begin
+                segment <= ~dispPattern[31:24];
+                anode <= 4'b0111;
+            end
+            default: ;
         endcase
     
     

@@ -31,6 +31,6 @@ module Seg7Decode(
     assign pattern[55:48] = {1'b1, 7'b1000110};    // 'C'
     assign pattern[47:40] = {1'b1, 7'b1000000};    // 'O'
     assign pattern[39:32] = {1'b1, 7'b0001000};    // 'R'='A'
-    assign pattern[31:24] = {1'b0, 7'b0000110};    // 'E'
+    assign pattern[31:24] = {1'b0, 7'b0000110};    // 'E' + '.'
 
 endmodule
