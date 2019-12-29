@@ -57,21 +57,21 @@ module Bird_Ctrl(
                 velocityDire = 0;
             end
             1: begin
-                /*if(button_state == 2'b01) begin
-                    velocity = initialVelocity;
-                    velocityDire = 1;
-                end*/
-                @(posedge up_button) begin
+                if(button_state == 2'b01) begin
                     velocity = initialVelocity;
                     velocityDire = 1;
                 end
+                /*@(posedge up_button) begin
+                    velocity = initialVelocity;
+                    velocityDire = 1;
+                end*/
 
                 if(velocity == 0 && velocityDire == 1)
                     velocityDire = 0;
 
                 velocity = velocityDire ? velocity - acceleration : velocity + acceleration;
                 V_pos_tmp = velocityDire ? V_pos + velocity : V_pos - velocity;
-                V_pos = V_pos_tmp < land_height ? : land_height - 1 : V_pos;
+                V_pos = V_pos_tmp < land_height ? land_height - 1 : V_pos;
             end
             2: begin  // Falling down to ground
                 velocity = velocityDire ? 0 : velocity + acceleration * 2;
