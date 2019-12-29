@@ -62,7 +62,6 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_FlappyBird_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="Top_FlappyBird_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="Top_FlappyBird_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_FlappyBird_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Top_FlappyBird_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Top_FlappyBird_summary.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Top_FlappyBird_test_isim_beh.exe"/>
@@ -230,15 +229,15 @@
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1577519772" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1577519772">
+    <transform xil_pn:end_ts="1577618926" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1577618926">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577519772" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3284816070110264509" xil_pn:start_ts="1577519772">
+    <transform xil_pn:end_ts="1577618926" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3284816070110264509" xil_pn:start_ts="1577618926">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577519773" xil_pn:in_ck="-4685640076031450674" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-2629072348920215966" xil_pn:start_ts="1577519772">
+    <transform xil_pn:end_ts="1577618930" xil_pn:in_ck="-4685640076031450674" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-2629072348920215966" xil_pn:start_ts="1577618926">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/bg_day_160_120.ngc"/>
@@ -264,27 +263,29 @@
       <outfile xil_pn:name="ipcore_dir/pipe_up_20_12.ngc"/>
       <outfile xil_pn:name="ipcore_dir/pipe_up_20_12.v"/>
     </transform>
-    <transform xil_pn:end_ts="1577519773" xil_pn:in_ck="6065376035671172243" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1577519773">
+    <transform xil_pn:end_ts="1577618930" xil_pn:in_ck="6065376035671172243" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1577618930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577519773" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-916485701782501809" xil_pn:start_ts="1577519773">
+    <transform xil_pn:end_ts="1577618930" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-916485701782501809" xil_pn:start_ts="1577618930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577519773" xil_pn:in_ck="6065376035671172243" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-679146238375871736" xil_pn:start_ts="1577519773">
+    <transform xil_pn:end_ts="1577618930" xil_pn:in_ck="6065376035671172243" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-679146238375871736" xil_pn:start_ts="1577618930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577519773" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5144512261809159444" xil_pn:start_ts="1577519773">
+    <transform xil_pn:end_ts="1577618930" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5144512261809159444" xil_pn:start_ts="1577618930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577522346" xil_pn:in_ck="3248372137180366765" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6418594580722400893" xil_pn:start_ts="1577522294">
+    <transform xil_pn:end_ts="1577620146" xil_pn:in_ck="3248372137180366765" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6418594580722400893" xil_pn:start_ts="1577620025">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Top_FlappyBird.lso"/>
       <outfile xil_pn:name="Top_FlappyBird.ngc"/>
@@ -298,25 +299,25 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1577519781" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="434273939745377185" xil_pn:start_ts="1577519781">
+    <transform xil_pn:end_ts="1577373146" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="434273939745377185" xil_pn:start_ts="1577373146">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577522362" xil_pn:in_ck="4386994401353899564" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5500812124096156674" xil_pn:start_ts="1577522346">
+    <transform xil_pn:end_ts="1577620170" xil_pn:in_ck="4386994401353899564" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5500812124096156674" xil_pn:start_ts="1577620146">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Top_FlappyBird.bld"/>
       <outfile xil_pn:name="Top_FlappyBird.ngd"/>
       <outfile xil_pn:name="Top_FlappyBird_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577522488" xil_pn:in_ck="-8553012950937978267" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-1239519347495594584" xil_pn:start_ts="1577522362">
+    <transform xil_pn:end_ts="1577620387" xil_pn:in_ck="-8553012950937978267" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-1239519347495594584" xil_pn:start_ts="1577620170">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Top_FlappyBird.pcf"/>
       <outfile xil_pn:name="Top_FlappyBird_map.map"/>
       <outfile xil_pn:name="Top_FlappyBird_map.mrp"/>
@@ -327,10 +328,11 @@
       <outfile xil_pn:name="Top_FlappyBird_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577522751" xil_pn:in_ck="6762326235068642910" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-8808472733522092617" xil_pn:start_ts="1577522488">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1577620689" xil_pn:in_ck="6762326235068642910" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-8808472733522092617" xil_pn:start_ts="1577620387">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Top_FlappyBird.ncd"/>
       <outfile xil_pn:name="Top_FlappyBird.pad"/>
       <outfile xil_pn:name="Top_FlappyBird.par"/>
@@ -339,13 +341,15 @@
       <outfile xil_pn:name="Top_FlappyBird.xpi"/>
       <outfile xil_pn:name="Top_FlappyBird_pad.csv"/>
       <outfile xil_pn:name="Top_FlappyBird_pad.txt"/>
-      <outfile xil_pn:name="Top_FlappyBird_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577522819" xil_pn:in_ck="5940090440757897890" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="3160107541638749219" xil_pn:start_ts="1577522751">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1577440902" xil_pn:in_ck="5940090440757897890" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="3160107541638749219" xil_pn:start_ts="1577440836">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Top_FlappyBird.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="top_flappybird.bgn"/>
@@ -355,13 +359,12 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1577522819" xil_pn:in_ck="-3366583883958629172" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-5505904082297326742" xil_pn:start_ts="1577522819">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1577373313" xil_pn:in_ck="-8553018576572451231" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="-3742689831323817468" xil_pn:start_ts="1577373294">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1577522751" xil_pn:in_ck="-8553018576572451231" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="-3742689831323817468" xil_pn:start_ts="1577522731">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Top_FlappyBird.twr"/>
       <outfile xil_pn:name="Top_FlappyBird.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

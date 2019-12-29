@@ -46,8 +46,7 @@ module Display(
     wire [11:0] BGR_Land;
     wire [9:0] X_Addr;
     wire [8:0] Y_Addr;
-    // wire [9:0] pip1_X;
-    reg [9:0] pip1_X;
+    wire [9:0] pip1_X;
     wire [8:0] pip1_Y;
     wire inBird, inLand, inPipe;
     reg [3:0]  BGR_R,BGR_G,BGR_B;
@@ -57,13 +56,10 @@ module Display(
     assign clk_VGA  = clkdiv[1];
 
     /* Core Control Part */
-    Bird_Ctrl BC_m0(.clk_ms(clkdiv[20]), .up_button(up_button), .state(state), .pip1_X(pip1_X), .pip1_Y(pip1_Y),
+    Bird_Ctrl BC_m0(.clk_ms(clkdiv[23]), .up_button(up_button), .state(state), .pip1_X(pip1_X), .pip1_Y(pip1_Y),
         .V_pos(bird_VPos), .isDead(isDead) );
     Pipe_Generator PG_m0(.clk_2ms(clkdiv[18]), .state(state),
        .pip_X(pip1_X), .pip_Y(pip1_Y), .score(score) );
-    assign pip1_Y = 300;
-    // always @(posedge clkdiv[20])
-        // pip1_X <= pip1_X == 0 ? 639 + slot_width : pip1_X - 1;
     
     /* BackGround */
     wire [14:0] bg_addr;
@@ -77,8 +73,7 @@ module Display(
     wire [11:0] land_addr;
     wire [3:0] land_abandon;
     assign inLand = Y_Addr < 100;
-    // assign land_addr = inLand ? (24 - Y_Addr / 4) * 160 + X_Addr / 4 : 0;
-    assign land_addr = X_Addr <= pip1_X ? (24 - Y_Addr / 4) * 160 + (pip1_X - X_Addr) / 4 : (24 - Y_Addr / 4) * 160 + (639 + pip1_X - X_Addr) / 4;
+    assign land_addr = (24 - Y_Addr / 4) * 160 + X_Addr <= pip1_X ? ((pip1_X - X_Addr) % 640) / 4 : (639 + pip1_X - X_Addr) / 4;  // use '%' in case that pip1_X == 639+60 && X_addr \in [0, 59]
     bg_land_160_25 Land_m0(.a(land_addr), .spo({land_abandon, BGR_Land}));
 
     /* Pipe: Right-Up Side */
@@ -87,7 +82,7 @@ module Display(
     wire [3:0] pU_abandon, pD_abandon;
     wire Opacity_up, Opacity_down;
 
-    assign inPipe = (Y_Addr >= pip1_Y || Y_Addr < pip1_Y - slot_height) && X_Addr > pip1_X - slot_width && X_Addr <= pip1_X;
+    assign inPipe = (Y_Addr >= pip1_Y || Y_Addr < pip1_Y - slot_height) && (X_Addr > pip1_X - slot_width || pip1_X < 0) && X_Addr <= pip1_X;  // in case of overflow that flush the pipe
     assign pip_addr_down = (Y_Addr - pip1_Y) > 35 ? (pip1_X - X_Addr) / 3 : (11 - (Y_Addr - pip1_Y) / 3) * 20 + (pip1_X - X_Addr) / 3;
     assign pip_addr_up = (pip1_Y - slot_height - 1 - Y_Addr) > 35 ? (pip1_X - X_Addr) / 3 + 200 : (pip1_Y - slot_height - 1 - Y_Addr) / 3 * 20 + ((pip1_X - X_Addr) % 640) / 3;  // use '%' in case that pip1_X == 639+60 && X_addr \in [0, 59]
 

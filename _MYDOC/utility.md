@@ -2,17 +2,25 @@
 
 ~~加一个switch调节背景 鸟颜色的功能~~
 
-上面的down管的显示有问题
+~~上面的down管的显示有问题~~
 
-鸟的逻辑控制(是不是因为sw15一直开着)
-
-水管消失的地方不对
+水管消失的地方不对(overflow)
 
 水管消失之后Land的草地会变形
 
-鸟他妈能遁地是为什么
+鸟他妈能遁地是为什么(在pos处理的地方加个判断得了)
                                  
 重置的问题大得很
+
+something wrong with the pipY generator
+
+sudden fall: maybe overflow (non-blockig)
+
+## Memo
+
+Why theb bird won't back to init: not using else if
+
+why after upBTN down the bird be reset???
 
 ## 自己的说明
 

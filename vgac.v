@@ -52,8 +52,8 @@ module vgac(input     [11:0] d_in_BGR,   // bbbb_gggg_rrrr, pixel
         // rdn      <= ~read;         // read pixel (active low)
         hs     <=  X_sync;       // horizontal synchronization
         vs     <=  Y_sync;       // vertical   synchronization
-        r      <=  read ? d_in_BGR[3:0]  : 4'b0;  // 3-bit red
-        g      <=  read ? d_in_BGR[7:4]  : 4'b0;  // 3-bit green
-        b      <=  read ? d_in_BGR[11:8] : 4'b0;  // 2-bit blue
+        r      <=  read ? d_in_BGR[3:0]  : 4'b0;  // 4-bit red
+        g      <=  read ? d_in_BGR[7:4]  : 4'b0;  // 4-bit green
+        b      <=  read ? d_in_BGR[11:8] : 4'b0;  // 4-bit blue
     end
 endmodule

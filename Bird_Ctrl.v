@@ -27,38 +27,60 @@ module Bird_Ctrl(
     output reg [8:0] V_pos
     );
 
-    parameter initialVelocity = 20;  // Velocity after up_button
+    parameter initialVelocity = 30;  // Velocity after up_button, MIST BE THE MULTIPLE OF `acceleration`
+    parameter acceleration    = 3;   // Acceleration of gravity
     parameter H_pos       = 320;
     parameter slot_width  = 60;
     parameter slot_height = 100;
     parameter land_height = 100;
+    parameter bird_Xwidth = 34;
+    parameter bird_Ywidth = 24;
 
-    reg [12:0] time_from = 0;       // Unit: ms, max 8*1024 ms
-    reg [5:0] velocity = 0;         // Unit: pixels/ms, max 64 pixels/ms
+    reg [12:0] time_from = 0;       // Unit: clk_fly, max 8*1024 clk_fly
+    reg [5:0] velocity = 0;         // Unit: pixels/ms, max 64 pixels/clk_fly
     reg velocityDire = 0;           // 1:up 0:down
 
     reg [3:0] angle;
-    reg [1:0] button_state = 00;
+    reg [1:0] button_state = 2'b00;
+    reg [8:0] V_pos_tmp = 0;
 
-    assign isDead = state && (V_pos < land_height || H_pos > pip1_X - slot_width && H_pos < pip1_X && V_pos > pip1_Y && V_pos < pip1_Y - slot_height);
-
+    assign isDead = state && (V_pos < land_height || H_pos - 2 > pip1_X - slot_width + 1 && H_pos - bird_Xwidth + 4 < pip1_X && (V_pos + bird_Ywidth - 2 > pip1_Y || V_pos + 2 < pip1_Y - slot_height));
 
     always @(posedge clk_ms) begin
-        button_state <= {button_state[0], up_button};
-        if(state == 0) begin
-            V_pos  <= 240;
-        end
-        else if (state == 1) begin
-            if(button_state == 2'b01) begin
-                velocity <= initialVelocity;
-                velocityDire <= 1;
+        // button_state = {button_state[0], up_button};
+        button_state[1] = button_state[0];
+        button_state[0] = up_button;
+        case(state)
+            0: begin
+                V_pos  = 240;
+                velocity = 0;
+                velocityDire = 0;
             end
-            if(velocity == 0 && velocityDire == 1)
-                velocityDire <= 0;
+            1: begin
+                /*if(button_state == 2'b01) begin
+                    velocity = initialVelocity;
+                    velocityDire = 1;
+                end*/
+                @(posedge up_button) begin
+                    velocity = initialVelocity;
+                    velocityDire = 1;
+                end
 
-            velocity <= velocityDire ? velocity - 1 : velocity + 1;
-            V_pos <= velocityDire ? V_pos + velocity : V_pos - velocity;
-        end
+                if(velocity == 0 && velocityDire == 1)
+                    velocityDire = 0;
+
+                velocity = velocityDire ? velocity - acceleration : velocity + acceleration;
+                V_pos_tmp = velocityDire ? V_pos + velocity : V_pos - velocity;
+                V_pos = V_pos_tmp < land_height ? : land_height - 1 : V_pos;
+            end
+            2: begin  // Falling down to ground
+                velocity = velocityDire ? 0 : velocity + acceleration * 2;
+                velocityDire = 0;
+                V_pos_tmp = V_pos - velocity;
+                V_pos = V_pos_tmp < land_height ? land_height - 1 : V_pos_tmp;
+            end
+            default: ;
+        endcase
     end
 
 endmodule

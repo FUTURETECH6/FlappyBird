@@ -41,34 +41,38 @@ module Top_FlappyBird(
         clkdiv <= clkdiv + 1'b1;
     end
 
+    assign up_button = SW_OK[6];  // Use any button to boost the bird up
+
+    /* Switch */
     wire [15:0] SW_OK;
     AntiJitter #(4) Top_AJ_SW[15:0](.clk(clkdiv[15]), .I(SW), .O(SW_OK) );
 
+    /* Keypad */
     wire [4:0] keyCode;
     wire keyReady;
     Keypad Top_KP(.clk(clkdiv[15]), .keyX(BTN_Y), .keyY(BTN_X), .keyCode(keyCode), .ready(keyReady) );
 
-    assign up_button = keyReady;    // Use any button to boost the bird up
-
-    wire [31:0] segTestData;
-    //wire [3:0] sout;
+    /* Segments */
     assign score_BCD[11:8] = score / 100;
-    assign score_BCD[7:4] = score - score_BCD[11:8] * 100 / 10;
-    assign score_BCD[3:0] = score / 10;
+    assign score_BCD[7:4] = (score - score_BCD[11:8] * 100) / 10;
+    assign score_BCD[3:0] = score % 10;
 
     Seg7Device Top_S7Device(.clkIO(clkdiv[3]), .clkScan(clkdiv[15:14]), .clkBlink(clkdiv[25]),
         .data({20'b0,score_BCD}), .point(8'h0), .LES(8'h0), .sout({SEGLED_CLK,SEGLED_DO,SEGLED_PEN,SEGLED_CLR}) );
 
-    always @* begin
-        if(SW_OK[15])
+    /* state switch */
+    always @(posedge clk) begin
+        if(rst)
             state <= 0;
-        if(up_button)
-            state <= 1;
-        if(isDead)
+        else if(isDead)
             state <= 2;
+        else if(up_button)
+            state <= 1;
+        if(state == 3)
+            state <= 0;
     end
 
-
-    Display DP_m0(.state(state), .clkdiv(clkdiv), .SW_OK(SW_OK),
+    /* VGA Display */
+    Display DP_m0(.state(state), .clkdiv(clkdiv), .SW_OK(SW_OK), .up_button(up_button),
         .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B), .VGA_hs(VGA_hs), .VGA_vs(VGA_vs) ,.score(score), .isDead(isDead) );
 endmodule

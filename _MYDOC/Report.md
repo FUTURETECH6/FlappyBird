@@ -254,9 +254,39 @@ graph LR
 
 ## 4.2 逻辑控制
 
-1. 鸟的控制
+1. 鸟的控制按钮
 
-   本来预期功能是按下一次键盘鸟获得一个向上的初速度，
+   本来预期功能是按下一次键盘鸟获得一个向上的初速度，但实际上变为按下之后鸟才有下落的反应，并且松开后马上回到未开始的状态。
+   
+2. 死亡后无法初始化的问题
+
+   发现鸟死后无论怎么按重置按钮鸟都留着不动，发现是状态切换的描述部分没有使用`else if`，这就导致了`state`被置0后由于`isDead`还未来得及清零马上又将`state`置为2，修改为以下之后即可正常使用。
+
+   ```Verilog
+       always @* begin
+           if(rst)
+               state <= 0;
+        else if(isDead)
+               state <= 2;
+        else if(up_button)
+               state <= 1;
+       end
+   ```
+   
+   
+   
+3. 鸟的瞬移问题
+
+   发现在鸟水平速度为0的瞬间鸟会向下瞬移一定长度。经检查发现是由以下原因共同造成
+
+   * 初始化时给鸟的方向设定是朝上即`velocityDire == 1`
+   * 鸟的方向改变语句是`if(velocity == 0 && velocityDire == 1)  velocityDire <= 0;`
+   * 鸟的速度(无符号数)改变语句是`velocity <= velocityDire ? velocity - 1 : velocity + 1;`
+   * 这个部分的语句均采用非阻塞赋值
+
+   由于是非阻塞赋值，因此鸟的速度变化时`velocityDire`仍为1，因此速度改变语句执行的命令是``velocity <= velocity - 1;`，但由于此时velocity已经为0了，因此会溢出变为有符号的-1即无符号的5'b11111，由于位置改变语句`V_pos <= velocityDire ? V_pos + velocity : V_pos - velocity;`会直接将位置减去速度最大值，因此效果就好像瞬移。
+
+   将初始化的鸟的方向设定为朝下并将该always语句中的赋值语句全部改为非阻塞即可。
 
 # 第五章-实验结果
 

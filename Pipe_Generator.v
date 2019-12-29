@@ -37,23 +37,24 @@ module Pipe_Generator(
 
     always @(posedge clk_2ms) begin
         case(state)
-            0:  begin
+            0: begin
                     pip_X <= 0;
                     score <= 0;
+            end
+            1: begin
+                if(pip_X == bird_HPos - bird_Xwidth)
+                    score <= score + 1;
+                if(pip_X == 0) begin
+                    pip_X <= 639 + slot_width;
+                    //pip_Y <= slot_height + {$random} % (480 - slot_height);
+                    pip_Y <= 300;
                 end
-            1:  begin
-                    if(pip_X == bird_HPos - bird_Xwidth)
-                        score <= score + 1;
-                    if(pip_X == 0) begin
-                        pip_X <= 639 + slot_width;
-                        pip_Y <= slot_height + {$random} % (480 - slot_height);
-                    end
-                    else
-                        pip_X <= pip_X - 1;
-                end
+                else
+                    pip_X <= pip_X - 1;
+            end
             default:begin
-                        pip_X <= pip_X; pip_Y <= pip_Y;
-                    end
+                pip_X <= pip_X; pip_Y <= pip_Y;
+            end
         endcase
     end
 endmodule
