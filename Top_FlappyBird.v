@@ -62,7 +62,7 @@ module Top_FlappyBird(
 
     /* Switch state */
     always @(posedge clk) begin
-        if(rst)
+        if(SW_OK[15])
             state <= 0;
         else if(isDead)
             state <= 2;
