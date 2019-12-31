@@ -5,5 +5,422 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-</messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"G:\FlappyBird\Top_FlappyBird.v" Line 61: Port <arg fmt="%s" index="1">dbg_keyLine</arg> is not connected to this instance
+</msg>
 
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"G:\FlappyBird\Top_FlappyBird.v" Line 68: Port <arg fmt="%s" index="1">segment</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Top_FlappyBird.v" Line 64: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Top_FlappyBird.v" Line 65: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"G:\FlappyBird\Display.v" Line 173: Port <arg fmt="%s" index="1">read</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 72: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 73: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 74: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 77: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 79: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Bird_Ctrl.v" Line 80: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Pipe_Generator.v" Line 62: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Pipe_Generator.v" Line 86: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Pipe_Generator.v" Line 89: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 68: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bg_day_160_120.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bg_day_160_120</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"G:\FlappyBird\Display.v" Line 69: Assignment to <arg fmt="%s" index="1">day_abondon</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bg_night_160_120.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bg_night_160_120</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"G:\FlappyBird\Display.v" Line 70: Assignment to <arg fmt="%s" index="1">night_abondon</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 76: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bg_land_160_25.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bg_land_160_25</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"G:\FlappyBird\Display.v" Line 77: Assignment to <arg fmt="%s" index="1">land_abandon</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 86: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 87: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\pipe_down_20_12.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">pipe_down_20_12</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\pipe_up_20_12.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">pipe_up_20_12</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 99: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird0_0.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird0_0</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird0_1.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird0_1</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird0_2.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird0_2</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird1_0.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird1_0</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird1_1.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird1_1</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\bird1_2.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">bird1_2</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 109: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 114: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 114: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 115: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 118: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 118: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 119: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 122: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 122: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"G:\FlappyBird\Display.v" Line 123: Signal &lt;<arg fmt="%s" index="1">SW_OK</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 140: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 141: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\Display.v" Line 142: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\GG_204_54.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">GG_204_54</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\ready_196_62.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">ready_196_62</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"G:\FlappyBird\ipcore_dir\resume_26_28.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">resume_26_28</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"G:\FlappyBird\Display.v" Line 146: Assignment to <arg fmt="%s" index="1">resume_abandon</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\vgac.v" Line 34: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"G:\FlappyBird\vgac.v" Line 50: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"G:\FlappyBird\Top_FlappyBird.v" Line 85: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">score</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">11</arg>-bit.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%d" index="2">13</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">U3</arg>&gt; of block &lt;<arg fmt="%s" index="4">SegmentDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Seg7Decode</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%d" index="2">14</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">U4</arg>&gt; of block &lt;<arg fmt="%s" index="4">SegmentDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Seg7Decode</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%d" index="2">15</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">U5</arg>&gt; of block &lt;<arg fmt="%s" index="4">SegmentDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Seg7Decode</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%d" index="2">16</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">U6</arg>&gt; of block &lt;<arg fmt="%s" index="4">SegmentDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Seg7Decode</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%d" index="2">17</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">U7</arg>&gt; of block &lt;<arg fmt="%s" index="4">SegmentDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Seg7Decode</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Top_FlappyBird.v</arg>&quot; line <arg fmt="%s" index="2">61</arg>: Output port &lt;<arg fmt="%s" index="3">dbg_keyLine</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Top_KP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Top_FlappyBird.v</arg>&quot; line <arg fmt="%s" index="2">68</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Top_S7Device</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Top_FlappyBird.v</arg>&quot; line <arg fmt="%s" index="2">68</arg>: Output port &lt;<arg fmt="%s" index="3">anode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Top_S7Device</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">LE&lt;7:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%s" index="2">13</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U3</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%s" index="2">14</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%s" index="2">15</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U5</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%s" index="2">16</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U6</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Seg7Decode.v</arg>&quot; line <arg fmt="%s" index="2">17</arg>: Output port &lt;<arg fmt="%s" index="3">segment</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U7</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clkdiv&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clkdiv&lt;17:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">clkdiv&lt;20:19&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clkdiv&lt;31:23&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SW_OK&lt;15:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">G:\FlappyBird\Display.v</arg>&quot; line <arg fmt="%s" index="2">173</arg>: Output port &lt;<arg fmt="%s" index="3">read</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">vgac_m0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;3&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;4&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;5&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;6&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;7&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;8&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;9&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;10&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;11&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;12&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;13&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;15&gt;</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">U1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Top_S7Device</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;3&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;4&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;5&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;6&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;7&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;8&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;9&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;10&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;11&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;12&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;13&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">Top_AJ_SW&lt;15&gt;</arg>&gt; of block &lt;<arg fmt="%s" index="2">AntiJitter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_rand_state[3]_PWR_21_o_wide_mux_5_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_anode</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_segment</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/pip_Y_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02341</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02401</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02371</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n01971</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n01951</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">V_pos_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Bird_Ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">V_pos_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Bird_Ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">V_pos_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Bird_Ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">V_pos_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Bird_Ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top_FlappyBird</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02211</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02151</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DP_m0/Mmult_n02071</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DP_m0/PG_m0/score_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Maddsub_score_BCD[11]_PWR_1_o_MuLt_8_OUT1_1&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkdiv_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Top_FlappyBird</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>

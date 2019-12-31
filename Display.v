@@ -42,7 +42,7 @@ module Display(
     parameter SW_BG       = 2;
 
     wire clk_VGA;
-    wire [8:0]  bird_VPos;
+    wire [12:0]  bird_VPos;
     wire [11:0] BGR_Land;
     wire [9:0] X_Addr;
     wire [8:0] Y_Addr;
@@ -56,9 +56,9 @@ module Display(
     assign clk_VGA  = clkdiv[1];
 
     /* Core Control Part */
-    Bird_Ctrl BC_m0(.clk_ms(clkdiv[23]), .up_button(up_button), .state(state), .pip1_X(pip1_X), .pip1_Y(pip1_Y),
+    Bird_Ctrl BC_m0(.clk_ms(clkdiv[21]), .up_button(up_button), .state(state), .pip1_X(pip1_X), .pip1_Y(pip1_Y),
         .V_pos(bird_VPos), .isDead(isDead) );
-    Pipe_Generator PG_m0(.clk_2ms(clkdiv[18]), .state(state),
+    Pipe_Generator PG_m0(.clk_2ms(SW_OK[14] ? clkdiv[17] : clkdiv[18]), .state(state),
        .pip_X(pip1_X), .pip_Y(pip1_Y), .score(score) );
     
     /* BackGround */
@@ -73,7 +73,7 @@ module Display(
     wire [11:0] land_addr;
     wire [3:0] land_abandon;
     assign inLand = Y_Addr < 100;
-    assign land_addr = (24 - Y_Addr / 4) * 160 + X_Addr <= pip1_X ? ((pip1_X - X_Addr) % 640) / 4 : (639 + pip1_X - X_Addr) / 4;  // use '%' in case that pip1_X == 639+60 && X_addr \in [0, 59]
+    assign land_addr = (24 - Y_Addr / 4) * 160 + (X_Addr <= pip1_X ? ((pip1_X - X_Addr) % 640) / 4 : (639 + pip1_X - X_Addr) / 4);  // use '%' in case that pip1_X == 639+60 && X_Addr \in [0, 59]
     bg_land_160_25 Land_m0(.a(land_addr), .spo({land_abandon, BGR_Land}));
 
     /* Pipe: Right-Up Side */
@@ -82,9 +82,9 @@ module Display(
     wire [3:0] pU_abandon, pD_abandon;
     wire Opacity_up, Opacity_down;
 
-    assign inPipe = (Y_Addr >= pip1_Y || Y_Addr < pip1_Y - slot_height) && (X_Addr > pip1_X - slot_width || pip1_X < 0) && X_Addr <= pip1_X;  // in case of overflow that flush the pipe
+    assign inPipe = (Y_Addr >= pip1_Y || Y_Addr < pip1_Y - slot_height) && (X_Addr > pip1_X - slot_width || pip1_X < slot_width) && X_Addr <= pip1_X;  // in case of overflow that flush the pipe
     assign pip_addr_down = (Y_Addr - pip1_Y) > 35 ? (pip1_X - X_Addr) / 3 : (11 - (Y_Addr - pip1_Y) / 3) * 20 + (pip1_X - X_Addr) / 3;
-    assign pip_addr_up = (pip1_Y - slot_height - 1 - Y_Addr) > 35 ? (pip1_X - X_Addr) / 3 + 200 : (pip1_Y - slot_height - 1 - Y_Addr) / 3 * 20 + ((pip1_X - X_Addr) % 640) / 3;  // use '%' in case that pip1_X == 639+60 && X_addr \in [0, 59]
+    assign pip_addr_up = (pip1_Y - slot_height - 1 - Y_Addr) > 35 ? (pip1_X - X_Addr) / 3 + 200 : (pip1_Y - slot_height - 1 - Y_Addr) / 3 * 20 + ((pip1_X - X_Addr) % 640) / 3;  // use '%' in case that pip1_X == 639+60 && X_Addr \in [0, 59]
 
     pipe_down_20_12 PD_m0(.a(pip_addr_down), .spo({pD_abandon, BGR_downPip}));
     pipe_up_20_12   PU_m0(.a(pip_addr_up),   .spo({pU_abandon, BGR_upPip}));
@@ -105,7 +105,9 @@ module Display(
     bird1_2 BG_B12_m0(.a(bird_addr), .spo({bird_opacity_12, bird_BGR_12}));
     reg [1:0] clk_wing = 0;    // For wing shaking
     always @(posedge clkdiv[22])
-        clk_wing = clk_wing == 3 ? 0 : clk_wing + 1;
+        if(state != 2)
+            clk_wing = clk_wing == 3 ? 0 : clk_wing + 1;
+
     always @(clk_wing) begin
         case(clk_wing)
             0: begin
@@ -124,11 +126,37 @@ module Display(
         endcase
     end
 
+    /* Prompt */
+    wire [13:0] GG_addr, ready_addr;
+    wire [9:0] resume_addr;
+    wire [3:0] GG_abandon, ready_abandon, resume_abandon;
+    wire [11:0] BGR_GG, BGR_ready, BGR_resume;
+    wire Opacity_GG, Opacity_ready;
+    wire inGG, inReady, inResume;
+    assign inGG = X_Addr > 218 && X_Addr <= 422 && Y_Addr > 213 && Y_Addr <= 267;
+    assign inReady = X_Addr > 222 && X_Addr <= 418 && Y_Addr > 289 && Y_Addr <= 351;
+    assign inResume = X_Addr > 294 && X_Addr <= 346 && Y_Addr > 212 && Y_Addr <= 268;
+
+    assign GG_addr = 204 * (267 - Y_Addr) + (X_Addr - 219);
+    assign ready_addr = 196 * (351 - Y_Addr) + (X_Addr - 223);
+    assign resume_addr = (268 - Y_Addr) / 2 * 26 + (X_Addr - 295) / 2;
+
+    GG_204_54 GG_m0(.a(GG_addr), .spo({GG_abandon, BGR_GG}));
+    ready_196_62 ready_m0(.a(ready_addr), .spo({ready_abandon, BGR_ready}));
+    resume_26_28 resume_m0(.a(resume_addr), .spo({resume_abandon, BGR_resume}));
+    assign Opacity_GG = GG_abandon == 4'hF;
+    assign Opacity_ready = ready_abandon == 4'hF;
 
 
-    // Procedure: bird > land > pipe > bg, skip the bird
+    // Procedure: prompt > bird > land > pipe > bg, skip the bird
     always @(posedge clk_VGA) begin
-        if(inBird && Opacity_Bird)
+        if(state == 2 && inGG && Opacity_GG)
+            {BGR_B,BGR_G,BGR_R} <= BGR_GG;
+        else if(state == 0 && inReady && Opacity_ready)
+            {BGR_B,BGR_G,BGR_R} <= BGR_ready;
+        else if(state == 3 && inResume)
+            {BGR_B,BGR_G,BGR_R} <= BGR_resume;
+        else if(inBird && Opacity_Bird)
             {BGR_B,BGR_G,BGR_R} <= BGR_Bird;
         else if(inLand)
             {BGR_B,BGR_G,BGR_R} <= BGR_Land;

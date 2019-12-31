@@ -162,3 +162,79 @@ xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn 
 ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
 map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
 par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.xst" -ofn "Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
+xst -intstyle ise -ifn "G:/FlappyBird/Top_FlappyBird.xst" -ofn "G:/FlappyBird/Top_FlappyBird.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc7k160t-ffg676-2L Top_FlappyBird.ngc Top_FlappyBird.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_FlappyBird_map.ncd Top_FlappyBird.ngd Top_FlappyBird.pcf 
+par -w -intstyle ise -ol high -mt off Top_FlappyBird_map.ncd Top_FlappyBird.ncd Top_FlappyBird.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_FlappyBird.twx Top_FlappyBird.ncd -o Top_FlappyBird.twr Top_FlappyBird.pcf -ucf top.ucf 
+bitgen -intstyle ise -f Top_FlappyBird.ut Top_FlappyBird.ncd 
