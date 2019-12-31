@@ -42,7 +42,7 @@ module Top_FlappyBird(
     always@(posedge clk) begin
         clkdiv <= clkdiv + 1'b1;
     end
-    
+
     always @(posedge clkdiv[20]) begin
         rstState[1] = rstState[0];
         rstState[0] = keyCode == 5'h0;
