@@ -5,28 +5,28 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">DP_m0/n0125&lt;0&gt;</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">DP_m0/n0190&lt;0&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">16</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">LED_CLK,
-LED_CLR,
-LED_DO,
-LED_PEN,
-SW&lt;15&gt;_IBUF</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">21</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">DP_m0/n0189&lt;0&gt;,
+DP_m0/n0188&lt;0&gt;,
+DP_m0/n0186&lt;0&gt;,
+LED_CLK,
+LED_CLR</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
-<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_3_OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_3_IOBUF/OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
 </msg>
 
-<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_2_OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_2_IOBUF/OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
 </msg>
 
-<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_1_OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_1_IOBUF/OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
 </msg>
 
-<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_0_OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">Top_KP/state_inv1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">BTN_Y_0_IOBUF/OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter Top_KP/state_inv1_INV_0 drives multiple loads.</arg>
 </msg>
 
 <msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">100.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">100.000</arg> Celsius)
@@ -39,9 +39,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">state_0_G</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
 </messages>
