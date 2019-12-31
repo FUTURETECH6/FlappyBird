@@ -1,12 +1,3 @@
-## 视频需体现功能
-
-* 任意按键起飞
-* 颜色切换、背景切换
-* 重置
-* 调速
-* 暂停
-* 分数显示
-
 ## LOG
 
 ~~加一个switch调节背景 鸟颜色的功能~~
@@ -18,24 +9,12 @@
 水管消失之后Land的草地会变形
 
 鸟他妈能遁地是为什么(在pos处理的地方加个判断得了)
-
+                                 
 重置的问题大得很
 
 something wrong with the pipY generator
 
 sudden fall: maybe overflow (non-blockig)
-
----
-
-land消失
-
-水管左边消失
-
-鸟不动
-
----
-
-加入 resume ready GG
 
 ## Memo
 

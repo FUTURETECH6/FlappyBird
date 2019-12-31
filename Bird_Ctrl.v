@@ -24,11 +24,11 @@ module Bird_Ctrl(
     input [9:0] pip1_X,
     input [8:0] pip1_Y,
     output isDead,
-    output reg [12:0] V_pos
+    output reg [8:0] V_pos
     );
 
-    parameter initialVelocity = 9;  // Velocity after up_button, MIST BE THE MULTIPLE OF `acceleration`
-    parameter acceleration    = 1;   // Acceleration of gravity
+    parameter initialVelocity = 30;  // Velocity after up_button, MIST BE THE MULTIPLE OF `acceleration`
+    parameter acceleration    = 3;   // Acceleration of gravity
     parameter H_pos       = 320;
     parameter slot_width  = 60;
     parameter slot_height = 100;
@@ -71,7 +71,7 @@ module Bird_Ctrl(
 
                 velocity = velocityDire ? velocity - acceleration : velocity + acceleration;
                 V_pos_tmp = velocityDire ? V_pos + velocity : V_pos - velocity;
-                V_pos = V_pos_tmp < land_height ? land_height - 1 : V_pos_tmp;
+                V_pos = V_pos_tmp < land_height ? land_height - 1 : V_pos;
             end
             2: begin  // Falling down to ground
                 velocity = velocityDire ? 0 : velocity + acceleration * 2;

@@ -1,4 +1,4 @@
-G:\FlappyBird\Top_FlappyBird.ngc 1577755406
+Z:\Documents\Xilinx\FlappyBird\Top_FlappyBird.ngc 1577620143
 ipcore_dir/bird0_0.ngc 1576494824
 ipcore_dir/bird0_1.ngc 1576495576
 ipcore_dir/bird0_2.ngc 1576495688
@@ -9,8 +9,5 @@ ipcore_dir/bg_land_160_25.ngc 1576494524
 ipcore_dir/bg_day_160_120.ngc 1577363224
 ipcore_dir/bg_night_160_120.ngc 1577207918
 ipcore_dir/pipe_down_20_12.ngc 1577202582
-ipcore_dir/GG_204_54.ngc 1577714344
-ipcore_dir/ready_196_62.ngc 1577714618
 ipcore_dir/pipe_up_20_12.ngc 1577202450
-ipcore_dir/resume_26_28.ngc 1577715204
 OK
