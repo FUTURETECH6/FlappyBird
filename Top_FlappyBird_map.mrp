@@ -10,39 +10,39 @@ Target Device  : xc7k160t
 Target Package : ffg676
 Target Speed   : -2l
 Mapper Version : kintex7 -- $Revision: 1.55 $
-Mapped Date    : Tue Dec 31 09:23:49 2019
+Mapped Date    : Tue Dec 31 13:50:56 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    4
 Slice Logic Utilization:
-  Number of Slice Registers:                   278 out of 202,800    1%
-    Number used as Flip Flops:                 262
+  Number of Slice Registers:                   283 out of 202,800    1%
+    Number used as Flip Flops:                 267
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               16
-  Number of Slice LUTs:                     12,213 out of 101,400   12%
-    Number used as logic:                   12,206 out of 101,400   12%
-      Number using O6 output only:           9,023
-      Number using O5 output only:             126
-      Number using O5 and O6:                3,057
+  Number of Slice LUTs:                     12,217 out of 101,400   12%
+    Number used as logic:                   12,209 out of 101,400   12%
+      Number using O6 output only:           9,018
+      Number using O5 output only:             130
+      Number using O5 and O6:                3,061
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:      8
+      Number with same-slice register load:      2
       Number with same-slice carry load:         5
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,927 out of  25,350   19%
-  Number of LUT Flip Flop pairs used:       12,240
-    Number with an unused Flip Flop:        11,997 out of  12,240   98%
-    Number with an unused LUT:                  27 out of  12,240    1%
-    Number of fully used LUT-FF pairs:         216 out of  12,240    1%
-    Number of unique control sets:              28
+  Number of occupied Slices:                 4,534 out of  25,350   17%
+  Number of LUT Flip Flop pairs used:       12,247
+    Number with an unused Flip Flop:        12,000 out of  12,247   97%
+    Number with an unused LUT:                  30 out of  12,247    1%
+    Number of fully used LUT-FF pairs:         217 out of  12,247    1%
+    Number of unique control sets:              30
     Number of slice register sites lost
-      to control set restrictions:             138 out of 202,800    1%
+      to control set restrictions:             149 out of 202,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -93,9 +93,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.83
 
-Peak Memory Usage:  1265 MB
-Total REAL time to MAP completion:  2 mins 46 secs 
-Total CPU time to MAP completion:   2 mins 41 secs 
+Peak Memory Usage:  1297 MB
+Total REAL time to MAP completion:  4 mins 7 secs 
+Total CPU time to MAP completion:   4 mins 1 secs 
 
 Table of Contents
 -----------------
@@ -137,12 +137,12 @@ WARNING:Pack:2912 - The LUT-1 inverter "Top_KP/state_inv1_INV_0" failed to join
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network DP_m0/n0190<0> has no load.
-INFO:LIT:395 - The above info message is repeated 21 more times for the
+INFO:LIT:243 - Logical network DP_m0/n0192<0> has no load.
+INFO:LIT:395 - The above info message is repeated 20 more times for the
    following (max. 5 shown):
-   DP_m0/n0189<0>,
+   DP_m0/n0191<0>,
+   DP_m0/n0190<0>,
    DP_m0/n0188<0>,
-   DP_m0/n0186<0>,
    LED_CLK,
    LED_CLR
    To see the details of these info messages, please use the -detail switch.
@@ -180,17 +180,17 @@ The trimmed logic reported below is either:
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
+The signal "DP_m0/n0192<0>" is unused and has been removed.
+ Unused block "DP_m0/Madd_n0192_Madd_xor<0>" (XOR) removed.
+The signal "DP_m0/n0191<0>" is unused and has been removed.
+ Unused block "DP_m0/Madd_n0191_Madd_xor<0>" (XOR) removed.
 The signal "DP_m0/n0190<0>" is unused and has been removed.
  Unused block "DP_m0/Madd_n0190_Madd_xor<0>" (XOR) removed.
-The signal "DP_m0/n0189<0>" is unused and has been removed.
- Unused block "DP_m0/Madd_n0189_Madd_xor<0>" (XOR) removed.
-The signal "DP_m0/n0188<0>" is unused and has been removed.
- Unused block "DP_m0/Madd_n0188_Madd_xor<0>" (XOR) removed.
 The signal "DP_m0/PWR_14_o_GND_22_o_add_61_OUT<0>" is unused and has been
 removed.
  Unused block "DP_m0/Madd_PWR_14_o_GND_22_o_add_61_OUT_xor<0>" (XOR) removed.
-The signal "DP_m0/n0186<0>" is unused and has been removed.
- Unused block "DP_m0/Mmux_n018611" (ROM) removed.
+The signal "DP_m0/n0188<0>" is unused and has been removed.
+ Unused block "DP_m0/Mmux_n018811" (ROM) removed.
 Unused block "DP_m0/resume_m0/spo<13>1" (ROM) removed.
 
 Optimized Block(s):

@@ -289,7 +289,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577755407" xil_pn:in_ck="-815273346865060691" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6418594580722400893" xil_pn:start_ts="1577755333">
+    <transform xil_pn:end_ts="1577771430" xil_pn:in_ck="-815273346865060691" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6418594580722400893" xil_pn:start_ts="1577771333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -311,21 +311,21 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577755428" xil_pn:in_ck="-8449986413426853230" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5500812124096156674" xil_pn:start_ts="1577755407">
+    <transform xil_pn:end_ts="1577771454" xil_pn:in_ck="-8449986413426853230" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5500812124096156674" xil_pn:start_ts="1577771430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Top_FlappyBird.bld"/>
       <outfile xil_pn:name="Top_FlappyBird.ngd"/>
       <outfile xil_pn:name="Top_FlappyBird_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577755597" xil_pn:in_ck="-8553012950937978267" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-1239519347495594584" xil_pn:start_ts="1577755428">
+    <transform xil_pn:end_ts="1577771705" xil_pn:in_ck="-8553012950937978267" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-1239519347495594584" xil_pn:start_ts="1577771454">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Top_FlappyBird.pcf"/>
       <outfile xil_pn:name="Top_FlappyBird_map.map"/>
       <outfile xil_pn:name="Top_FlappyBird_map.mrp"/>
@@ -336,7 +336,7 @@
       <outfile xil_pn:name="Top_FlappyBird_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577755811" xil_pn:in_ck="6762326235068642910" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-8808472733522092617" xil_pn:start_ts="1577755597">
+    <transform xil_pn:end_ts="1577772260" xil_pn:in_ck="6762326235068642910" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-8808472733522092617" xil_pn:start_ts="1577771705">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -351,7 +351,7 @@
       <outfile xil_pn:name="Top_FlappyBird_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1577755879" xil_pn:in_ck="5940090440757897890" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="3160107541638749219" xil_pn:start_ts="1577755811">
+    <transform xil_pn:end_ts="1577772364" xil_pn:in_ck="5940090440757897890" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="3160107541638749219" xil_pn:start_ts="1577772260">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Top_FlappyBird.ut"/>
@@ -366,6 +366,8 @@
     <transform xil_pn:end_ts="1577755879" xil_pn:in_ck="-3366583883958629172" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-5505904082297326742" xil_pn:start_ts="1577755879">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1577751677" xil_pn:in_ck="-3366583883958629172" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7801172297726357142" xil_pn:start_ts="1577751676">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -373,7 +375,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1577755811" xil_pn:in_ck="-8553018576572451231" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="-3742689831323817468" xil_pn:start_ts="1577755790">
+    <transform xil_pn:end_ts="1577772260" xil_pn:in_ck="-8553018576572451231" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="-3742689831323817468" xil_pn:start_ts="1577772229">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Top_FlappyBird.twr"/>

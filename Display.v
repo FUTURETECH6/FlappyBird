@@ -49,16 +49,18 @@ module Display(
     wire [9:0] pip1_X;
     wire [8:0] pip1_Y;
     wire inBird, inLand, inPipe;
+    wire SW_speed;
     reg [3:0]  BGR_R,BGR_G,BGR_B;
     reg [11:0] BGR_Bird;
     reg Opacity_Bird;
 
     assign clk_VGA  = clkdiv[1];
+    assign SW_speed = SW_OK[14];
 
     /* Core Control Part */
     Bird_Ctrl BC_m0(.clk_ms(clkdiv[21]), .up_button(up_button), .state(state), .pip1_X(pip1_X), .pip1_Y(pip1_Y),
         .V_pos(bird_VPos), .isDead(isDead) );
-    Pipe_Generator PG_m0(.clk_2ms(SW_OK[14] ? clkdiv[17] : clkdiv[18]), .state(state),
+    Pipe_Generator PG_m0(.clk_2ms(SW_speed ? clkdiv[17] : clkdiv[18]), .state(state),
        .pip_X(pip1_X), .pip_Y(pip1_Y), .score(score) );
     
     /* BackGround */
