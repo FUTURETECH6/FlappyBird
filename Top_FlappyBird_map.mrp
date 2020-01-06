@@ -10,39 +10,39 @@ Target Device  : xc7k160t
 Target Package : ffg676
 Target Speed   : -2l
 Mapper Version : kintex7 -- $Revision: 1.55 $
-Mapped Date    : Tue Dec 31 13:50:56 2019
+Mapped Date    : Fri Jan 03 12:10:20 2020
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    4
 Slice Logic Utilization:
-  Number of Slice Registers:                   283 out of 202,800    1%
-    Number used as Flip Flops:                 267
+  Number of Slice Registers:                   368 out of 202,800    1%
+    Number used as Flip Flops:                 352
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               16
-  Number of Slice LUTs:                     12,217 out of 101,400   12%
-    Number used as logic:                   12,209 out of 101,400   12%
-      Number using O6 output only:           9,018
-      Number using O5 output only:             130
-      Number using O5 and O6:                3,061
+  Number of Slice LUTs:                     12,299 out of 101,400   12%
+    Number used as logic:                   12,291 out of 101,400   12%
+      Number using O6 output only:           9,061
+      Number using O5 output only:             137
+      Number using O5 and O6:                3,093
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
     Number used exclusively as route-thrus:      8
-      Number with same-slice register load:      2
-      Number with same-slice carry load:         5
+      Number with same-slice register load:      1
+      Number with same-slice carry load:         6
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,534 out of  25,350   17%
-  Number of LUT Flip Flop pairs used:       12,247
-    Number with an unused Flip Flop:        12,000 out of  12,247   97%
-    Number with an unused LUT:                  30 out of  12,247    1%
-    Number of fully used LUT-FF pairs:         217 out of  12,247    1%
-    Number of unique control sets:              30
+  Number of occupied Slices:                 4,880 out of  25,350   19%
+  Number of LUT Flip Flop pairs used:       12,318
+    Number with an unused Flip Flop:        11,993 out of  12,318   97%
+    Number with an unused LUT:                  19 out of  12,318    1%
+    Number of fully used LUT-FF pairs:         306 out of  12,318    2%
+    Number of unique control sets:              54
     Number of slice register sites lost
-      to control set restrictions:             149 out of 202,800    1%
+      to control set restrictions:             280 out of 202,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -53,8 +53,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        45 out of     400   11%
-    Number of LOCed IOBs:                       45 out of      45  100%
+  Number of bonded IOBs:                        49 out of     400   12%
+    Number of LOCed IOBs:                       49 out of      49  100%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     325    0%
@@ -91,11 +91,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.83
+Average Fanout of Non-Clock Nets:                4.82
 
-Peak Memory Usage:  1297 MB
-Total REAL time to MAP completion:  4 mins 7 secs 
-Total CPU time to MAP completion:   4 mins 1 secs 
+Peak Memory Usage:  1300 MB
+Total REAL time to MAP completion:  3 mins 22 secs 
+Total CPU time to MAP completion:   3 mins 21 secs 
 
 Table of Contents
 -----------------
@@ -138,13 +138,13 @@ WARNING:Pack:2912 - The LUT-1 inverter "Top_KP/state_inv1_INV_0" failed to join
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network DP_m0/n0192<0> has no load.
-INFO:LIT:395 - The above info message is repeated 20 more times for the
-   following (max. 5 shown):
+INFO:LIT:395 - The above info message is repeated 5 more times for the following
+   (max. 5 shown):
    DP_m0/n0191<0>,
    DP_m0/n0190<0>,
    DP_m0/n0188<0>,
-   LED_CLK,
-   LED_CLR
+   rst_IBUF,
+   DP_m0/resume_m0/spo<12>
    To see the details of these info messages, please use the -detail switch.
 INFO:Pack:1716 - Initializing temperature to 100.000 Celsius. (default - Range:
    0.000 to 100.000 Celsius)
@@ -186,9 +186,9 @@ The signal "DP_m0/n0191<0>" is unused and has been removed.
  Unused block "DP_m0/Madd_n0191_Madd_xor<0>" (XOR) removed.
 The signal "DP_m0/n0190<0>" is unused and has been removed.
  Unused block "DP_m0/Madd_n0190_Madd_xor<0>" (XOR) removed.
-The signal "DP_m0/PWR_14_o_GND_22_o_add_61_OUT<0>" is unused and has been
+The signal "DP_m0/PWR_15_o_GND_23_o_add_61_OUT<0>" is unused and has been
 removed.
- Unused block "DP_m0/Madd_PWR_14_o_GND_22_o_add_61_OUT_xor<0>" (XOR) removed.
+ Unused block "DP_m0/Madd_PWR_15_o_GND_23_o_add_61_OUT_xor<0>" (XOR) removed.
 The signal "DP_m0/n0188<0>" is unused and has been removed.
  Unused block "DP_m0/Mmux_n018811" (ROM) removed.
 Unused block "DP_m0/resume_m0/spo<13>1" (ROM) removed.
@@ -229,6 +229,10 @@ Section 6 - IOB Properties
 | BTN_Y<1>                           | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              | PULLUP   |          |
 | BTN_Y<2>                           | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              | PULLUP   |          |
 | BTN_Y<3>                           | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              | PULLUP   |          |
+| LED_CLK                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED_CLR                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED_DO                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED_PEN                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | SEGLED_CLK                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | SEGLED_CLR                         | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | SEGLED_DO                          | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |

@@ -2,14 +2,14 @@ Command line:
    vgac_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50934
+     -socket  49357
 
-Thu Dec 26 20:20:31 2019
+Sat Jan 04 22:06:01 2020
 
 
  Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 887.992 Meg
+ Current Memory Usage: 888.046 Meg
 
  Total Signals          : 29
  Total Nets             : 82
@@ -20,9 +20,9 @@ Thu Dec 26 20:20:31 2019
  Total Traceable Variables  : 30
  Total Scalar Nets and Variables : 228
 
- Total Simulation Time: 1.4375 sec
+ Total Simulation Time: 1.10938 sec
 
- Current Memory Usage: 730.706 Meg
+ Current Memory Usage: 730.759 Meg
 
-Thu Dec 26 20:24:41 2019
+Sat Jan 04 22:33:18 2020
 

@@ -82,7 +82,6 @@ module Pipe_Generator(
                         default: ;
                     endcase
                     //pip_Y <= slot_height + pip_Vpos_buf + {$random} % (480 - slot_height - pip_Vpos_buf);
-                    //pip_Y <= 300;
                     rand_state <= (& rand_state) ? 0 : rand_state + 1;
                 end
                 else

@@ -14,6 +14,8 @@
          <ClosedNode>/Top Z:|Documents|Xilinx|FlappyBird|Top.v/segDevice - Seg7Device</ClosedNode>
          <ClosedNode>/Top_FlappyBird G:|FlappyBird|Top_FlappyBird.v/Top_KP - Keypad</ClosedNode>
          <ClosedNode>/Top_FlappyBird G:|FlappyBird|Top_FlappyBird.v/Top_S7Device - Seg7Device</ClosedNode>
+         <ClosedNode>/Top_FlappyBird Z:|Documents|Xilinx|FlappyBird|Top_FlappyBird.v/DP_m0 - Display</ClosedNode>
+         <ClosedNode>/Top_FlappyBird Z:|Documents|Xilinx|FlappyBird|Top_FlappyBird.v/Top_KP - Keypad</ClosedNode>
          <ClosedNode>/Top_FlappyBird Z:|Documents|Xilinx|FlappyBird|Top_FlappyBird.v/Top_S7Device - Seg7Device</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -21,7 +23,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000014e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000014e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>Top_FlappyBird (Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird.v)</CurrentItem>
    </ItemView>
@@ -35,7 +37,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Design Utilities</CurrentItem>
    </ItemView>
@@ -62,7 +64,7 @@
       <CurrentItem>work</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001020000009301000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
@@ -83,15 +85,18 @@
          <ClosedNode>CORE Generator</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
@@ -116,7 +121,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -133,13 +138,13 @@
          <ClosedNode>/bg_day_160_120_test Z:|Documents|Xilinx|FlappyBird|bg_day_160_120_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Top_FlappyBird_test (Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird_test.v)</SelectedItem>
+         <SelectedItem>vgac_test (Z:/Documents/Xilinx/FlappyBird/vgac_test.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000162000000020000000000000000000000000200000064ffffffff000000810000000300000002000001620000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Top_FlappyBird_test (Z:/Documents/Xilinx/FlappyBird/Top_FlappyBird_test.v)</CurrentItem>
+      <CurrentItem>vgac_test (Z:/Documents/Xilinx/FlappyBird/vgac_test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -151,7 +156,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bd000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bd0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -164,7 +169,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bd000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bd0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>

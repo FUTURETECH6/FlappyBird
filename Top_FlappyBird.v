@@ -68,6 +68,9 @@ module Top_FlappyBird(
     Seg7Device Top_S7Device(.clkIO(clkdiv[3]), .clkScan(clkdiv[15:14]), .clkBlink(clkdiv[25]),
         .data({20'b0,score_BCD}), .point(8'h0), .LES(8'h0), .sout({SEGLED_CLK,SEGLED_DO,SEGLED_PEN,SEGLED_CLR}) );
 
+    
+    ShiftReg #(.WIDTH(16)) LED_m0 (.clk(clkdiv[3]), .pdata(~SW_OK), .sout({LED_CLK,LED_DO,LED_PEN,LED_CLR}));
+
     /* Switch state */
     always @(posedge clk) begin
         if(rstState == 2'b01)
